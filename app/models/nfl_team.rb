@@ -1,0 +1,2 @@
+class NflTeam < Team
+end

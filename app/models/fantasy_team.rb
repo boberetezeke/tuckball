@@ -1,0 +1,2 @@
+class FantasyTeam < Team
+end

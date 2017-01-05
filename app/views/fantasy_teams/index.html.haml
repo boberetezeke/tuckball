@@ -1,0 +1,15 @@
+.row
+  .panel.panel-primary
+    .panel-heading
+      %h3 Fantasy Teams
+    .panel-body
+      %table.table
+        %thead
+          %tr.row
+            %th Name
+            %th Score
+        %tbody
+          - @fantasy_teams.each do |fantasy_team|
+            %tr.row
+              %td= link_to(fantasy_team.name, fantasy_team)
+              %td

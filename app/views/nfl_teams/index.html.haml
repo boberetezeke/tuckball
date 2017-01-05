@@ -1,0 +1,15 @@
+.row
+  .panel.panel-primary
+    .panel-heading
+      %h3 NFL Teams
+    .panel-body
+      %table.table
+        %thead
+          %tr.row
+            %th Name
+            %th Score
+        %tbody
+          - @nfl_teams.each do |nfl_team|
+            %tr.row
+              %td= link_to(nfl_team.name, nfl_team)
+              %td

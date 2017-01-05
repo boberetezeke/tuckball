@@ -1,0 +1,15 @@
+.row
+  .panel.panel-primary
+    .panel-heading
+      %h3= @game.name
+    .panel-body
+      %table.table
+        %thead
+          %tr.row
+            %th Name
+            %th Score
+        %tbody
+          - @game.game_scores.each do |game_score|
+            %tr.row
+              %td= link_to(game_score.player.name, game_score.player)
+              %td
