@@ -3,13 +3,34 @@
     .panel-heading
       %h3= @game.name
     .panel-body
+      %h3 Position Players
+
       %table.table
         %thead
           %tr.row
             %th Name
+            = render partial: 'shared/non_kicker_headings'
             %th Score
         %tbody
-          - @game.game_scores.each do |game_score|
+          - @non_kicker_game_scores.each do |game_score|
             %tr.row
               %td= link_to(game_score.player.name, game_score.player)
+              = render partial: 'shared/non_kicker_values', locals: { game_score: game_score }
               %td
+                %strong= game_score.score
+
+      %h3 Kickers
+
+      %table.table
+        %thead
+          %tr.row
+            %th Name
+            = render partial: 'shared/kicker_headings'
+            %th Score
+        %tbody
+          - @kicker_game_scores.each do |game_score|
+            %tr.row
+              %td= link_to(game_score.player.name, game_score.player)
+              = render partial: 'shared/kicker_values', locals: { game_score: game_score }
+              %td
+                %strong= game_score.score

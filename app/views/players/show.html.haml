@@ -7,9 +7,21 @@
         %thead
           %tr.row
             %th Game
+            - if @player.position == "K"
+              = render partial: 'shared/kicker_headings'
+            - else
+              = render partial: 'shared/non_kicker_headings'
             %th Score
         %tbody
-          - @player.game_scores.each do |game_score|
-            %tr.row
-              %td= link_to(game_score.game.name, game_score.game)
-              %td
+          - if @player.position == "K"
+            - @player.game_scores.each do |game_score|
+              %tr.row
+                %td= link_to(game_score.game.name, game_score.game)
+                = render partial: 'shared/kicker_values', locals: { game_score: game_score }
+                %td= game_score.score
+          - else
+            - @player.game_scores.each do |game_score|
+              %tr.row
+                %td= link_to(game_score.game.name, game_score.game)
+                = render partial: 'shared/non_kicker_values', locals: { game_score: game_score }
+                %td= game_score.score

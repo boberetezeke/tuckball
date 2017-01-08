@@ -16,14 +16,15 @@
             %th K
             %th Score
         %tbody
-          - @fantasy_teams.each do |fantasy_team|
+          - @fantasy_teams.sort_by(&:score).reverse.each do |fantasy_team|
             %tr.row
               %td= link_to(fantasy_team.name, fantasy_team)
-              %td= fantasy_team.player_name_at_pos("QB")
-              %td= fantasy_team.player_name_at_pos("RB1")
-              %td= fantasy_team.player_name_at_pos("RB2")
-              %td= fantasy_team.player_name_at_pos("WR1")
-              %td= fantasy_team.player_name_at_pos("WR2")
-              %td= fantasy_team.player_name_at_pos("TE")
-              %td= fantasy_team.player_name_at_pos("K")
+              %td= fantasy_team.player_name_at_pos_and_score("QB")
+              %td= fantasy_team.player_name_at_pos_and_score("RB1")
+              %td= fantasy_team.player_name_at_pos_and_score("RB2")
+              %td= fantasy_team.player_name_at_pos_and_score("WR1")
+              %td= fantasy_team.player_name_at_pos_and_score("WR2")
+              %td= fantasy_team.player_name_at_pos_and_score("TE")
+              %td= fantasy_team.player_name_at_pos_and_score("K")
               %td
+                %strong= fantasy_team.score

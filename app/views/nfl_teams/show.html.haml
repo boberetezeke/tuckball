@@ -9,7 +9,7 @@
             %th Name
             %th Score
         %tbody
-          - @nfl_team.players.distinct.each do |player|
+          - @nfl_team.players.distinct.sort_by(&:score).reverse.each do |player|
             %tr.row
               %td= link_to(player.name, player)
-              %td
+              %td= player.score

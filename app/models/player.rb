@@ -8,4 +8,8 @@ class Player < ApplicationRecord
   has_many :game_scores
 
   default_scope ->{ order(:name) }
+
+  def score
+    game_scores.map(&:score).sum
+  end
 end
