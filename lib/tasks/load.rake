@@ -1,0 +1,176 @@
+namespace :load do
+  desc "load up fantasy teams"
+  task :fantasy_teams => :environment do
+    teams = {
+        "Melanie" => {
+            "QB"  => ["Matt Ryan",          "Atlanta"],
+            "RB1" => ["Le'Veon Bell",       "Pittsburg"],
+            "RB2" => ["LeGarrette Blount",  "New England"],
+            "WR1" => ["Doug Baldwin",       "Seattle"],
+            "WR2" => ["Michael Crabtree",   "Oakland"],
+            "TE" =>  ["Jason Witten",       "Dallas"],
+            "K" =>   ["Cairo Santos",       "Kansas City"],
+            "SB-Score" => 48
+        },
+
+        "Steve" => {
+            "QB"  => ["Aaron Rodgers",      "Green Bay"],
+            "RB1" => ["Thomas Rawls",       "Seattle"],
+            "RB2" => ["Jay Ajayi",          "Miami"],
+            "WR1" => ["Julio Jones",        "Atlanta"],
+            "WR2" => ["Antonio Brown",      "Pittsburg"],
+            "TE" =>  ["Martellius Bennet",  "New England"],
+            "K" =>   ["Cairo Santos",       "Kansas City"],
+            "SB-Score" => 50
+        },
+
+        "Paul T" => {
+            "QB"  => ["Tom Brady",          "New England"],
+            "RB1" => ["Ezekiel Elliot",     "Dallas"],
+            "RB2" => ["Lamar Miller",       "Houston"],
+            "WR1" => ["Jordy Nelson",       "Green Bay"],
+            "WR2" => ["Antonio Brown",      "Pittsburg"],
+            "TE" =>  ["Travis Kelce",       "Kansas City"],
+            "K" =>   ["Matt Bryant",        "Atlanta"],
+            "SB-Score" => 49
+        },
+
+        "Roger" => {
+            "QB"  => ["Matt Ryan",          "Atlanta"],
+            "RB1" => ["Ezekiel Elliot",     "Dallas"],
+            "RB2" => ["LeGarrette Blount",  "New England"],
+            "WR1" => ["Odell Beckham Jr",   "New York"],
+            "WR2" => ["Antonio Brown",      "Pittsburg"],
+            "TE" =>  ["Travis Kelce",       "Kansas City"],
+            "K" =>   ["Steve Hauschka",     "Seattle"],
+            "SB-Score" => 48
+        },
+
+        "Paul D" => {
+            "QB"  => ["Tom Brady",          "New England"],
+            "RB1" => ["Le'Veon Bell",       "Pittsburg"],
+            "RB2" => ["Ezekiel Elliot",     "Dallas"],
+            "WR1" => ["Odell Beckham Jr",   "New York"],
+            "WR2" => ["Jordy Nelson",       "Green Bay"],
+            "TE" =>  ["Jimmy Graham",       "Seattle"],
+            "K" =>   ["Matt Bryant",        "Atlanta"],
+            "SB-Score" => 45
+        },
+
+        "Pat" => {
+            "QB"  => ["Tom Brady",          "New England"],
+            "RB1" => ["Le'Veon Bell",       "Pittsburg"],
+            "RB2" => ["Ezekiel Elliot",     "Dallas"],
+            "WR1" => ["Odell Beckham Jr",   "New York"],
+            "WR2" => ["Julio Jones",        "Atlanta"],
+            "TE" =>  ["Jared Cook",         "Green Bay"],
+            "K" =>   ["Steve Hauschka",     "Seattle"],
+            "SB-Score" => 54
+        },
+
+        "Greg" => {
+            "QB"  => ["Tom Brady",          "New England"],
+            "RB1" => ["Le'Veon Bell",       "Pittsburg"],
+            "RB2" => ["Ezekiel Elliot",     "Dallas"],
+            "WR1" => ["Odell Beckham Jr",   "New York"],
+            "WR2" => ["Jordy Nelson",       "Green Bay"],
+            "TE" =>  ["Travis Kelce",       "Kansas City"],
+            "K" =>   ["Steve Hauschka",     "Seattle"],
+            "SB-Score" => 61
+        },
+    }
+
+
+    teams.each do |person, team|
+      fantasy_team = FantasyTeam.create(name: person)
+
+      team.each do |pos, (player_name, team_name)|
+        next if pos == "SB-Score"
+
+        pos = "WR" if pos == "WR1" || pos == "WR2"
+        pos = "RB" if pos == "RB1" || pos == "RB2"
+        player = Player.find_or_create_by(name: player_name, position: pos)
+        fantasy_team.players << player
+
+        nfl_team = NflTeam.find_or_create_by(name: team_name)
+        nfl_team.players << player
+      end
+    end
+  end
+
+  desc "load up games"
+  task :games => :environment do
+    if !NflTeam.find_by_name("Detroit")
+      NflTeam.create(name: 'Detroit')
+    end
+
+    games = {
+        ["Oakland", "Houston", Time.utc(2017, 1, 7, 3, 35)] => {
+            #                     PassTD PassInt RecvTD RushTD PassYds RecvYds RushYds Fmbl,  2PTPass 2PTRecv 2PTRush 0-39FGs 40-49FGs 50+FGs ExPt FGMiss
+            "Michael Crabtree" => [ 0,     0,      0,     0,     0,      33,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+            "Lamar Miller" =>     [ 0,     0,      0,     1,     0,      0,      73,     0,     0,      0,      0,      0,      0,       0,     0,   0      ]
+        },
+
+        #                         PassTD PassInt RecvTD RushTD PassYds RecvYds RushYds Fmbl,  2PTPass 2PTRecv 2PTRush 0-39FGs 40-49FGs 50+FGs ExPt FGMiss
+        ["Detroit", "Seattle", Time.utc(2017, 1, 7, 7, 35)] => {
+            "Doug Baldwin" =>     [ 0,     0,      1,     0,     0,      104,    6,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+            "Jimmy Graham" =>     [ 0,     0,      0,     0,     0,      37,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+            "Steve Hauschka" =>   [ 0,     0,      0,     0,     0,      0,      0,      0,     0,      0,      0,      1,      1,       0,     2,   0      ],
+            "Thomas Rawls" =>     [ 0,     0,      0,     1,     0,      33,     161,    0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        }
+    }
+
+    games.each do |opponents, scores|
+      visitor, home, time = opponents
+      home_team = NflTeam.find_by_name(home)
+      visiting_team = NflTeam.find_by_name(visitor)
+      players_and_stats = scores.map{|player, stats| [Player.find_by_name(player), stats]}
+
+      if home_team.nil?
+        puts "wrong team name for home team: #{home}"
+        next
+      end
+
+      if visiting_team.nil?
+        puts "wrong team name for visiting team: #{visitor}"
+        next
+      end
+
+      if players_and_stats.select{|player, stats| player.nil? }.present?
+        puts "wrong player name in game between #{home} and #{visitor}"
+        next
+      end
+
+      game = Game.where(home_team: home_team, visiting_team: visiting_team).first
+      if !game
+        puts "creating game between: #{visitor} and #{home}"
+        game = Game.create(home_team: home_team, visiting_team: visiting_team, game_time: time)
+        players_and_stats.each do |player, stats|
+          puts "creating stat for player #{player.name}"
+          game.game_scores <<
+            GameScore.create(
+              passing_tds:      stats[0],
+              passing_ints:     stats[1],
+              receiving_tds:    stats[2],
+              rushing_tds:      stats[3],
+              yards_passing:    stats[4],
+              yards_receiving:  stats[5],
+              yards_rushing:    stats[6],
+              fumbles:          stats[7],
+              passing_2pt:      stats[8],
+              receiving_2pt:    stats[9],
+              rushing_2pt:      stats[10],
+              fg_0_39:          stats[11],
+              fg_40_49:         stats[12],
+              fg_50_plus:       stats[13],
+              ext_pt:           stats[14],
+              fg_miss:          stats[15],
+
+              game: game,
+              player: player
+            )
+        end
+      end
+    end
+  end
+end

@@ -10,10 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170105033958) do
+ActiveRecord::Schema.define(version: 20170108145630) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "fantasy_team_memberships", force: :cascade do |t|
+    t.integer "player_id"
+    t.integer "fantasy_team_id"
+  end
 
   create_table "game_scores", force: :cascade do |t|
     t.integer "passing_tds"
@@ -24,6 +29,16 @@ ActiveRecord::Schema.define(version: 20170105033958) do
     t.integer "yards_rushing"
     t.integer "player_id"
     t.integer "game_id"
+    t.integer "passing_ints"
+    t.integer "fumbles"
+    t.integer "passing_2pt"
+    t.integer "receiving_2pt"
+    t.integer "rushing_2pt"
+    t.integer "fg_0_39"
+    t.integer "fg_40_49"
+    t.integer "fg_50_plus"
+    t.integer "ext_pt"
+    t.integer "fg_miss"
   end
 
   create_table "games", force: :cascade do |t|
@@ -32,14 +47,14 @@ ActiveRecord::Schema.define(version: 20170105033958) do
     t.datetime "game_time"
   end
 
+  create_table "nfl_team_memberships", force: :cascade do |t|
+    t.integer "player_id"
+    t.integer "nfl_team_id"
+  end
+
   create_table "players", force: :cascade do |t|
     t.string "name"
     t.string "position"
-  end
-
-  create_table "team_memberships", force: :cascade do |t|
-    t.integer "team_id"
-    t.integer "player_id"
   end
 
   create_table "teams", force: :cascade do |t|
