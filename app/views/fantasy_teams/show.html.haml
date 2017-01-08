@@ -8,12 +8,14 @@
           %tr.row
             %th QB
             %th Name
-            /%th NFL Team
+            %th NFL Team
+            %th Games Played
             %th Score
         %tbody
-          - @fantasy_team.players.each do |player|
+          - @fantasy_team.players.sort_by(&:position_view_order).each do |player|
             %tr.row
               %td= player.position
-              %td= link_to(player.name, player)
-              /%td= player.nfl_teams.first.name
-              %td
+              %td= player_link(player)
+              %td= player.nfl_teams.first.name
+              %td= player.games_played
+              %td= player.score

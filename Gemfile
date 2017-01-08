@@ -45,8 +45,6 @@ gem 'responders'
 gem 'formtastic', '~> 3.0'
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 gem 'formtastic-bootstrap' #, git: 'git://github.com/0xCCD/formtastic-bootstrap.git'
-gem 'will_paginate'
-gem 'will_paginate-bootstrap'
 gem 'pundit'
 
 group :development, :test do

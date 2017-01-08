@@ -14,7 +14,7 @@
         %tbody
           - @non_kicker_game_scores.each do |game_score|
             %tr.row
-              %td= link_to(game_score.player.name, game_score.player)
+              %td= player_link(game_score.player)
               = render partial: 'shared/non_kicker_values', locals: { game_score: game_score }
               %td
                 %strong= game_score.score

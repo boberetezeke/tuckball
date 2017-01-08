@@ -19,3 +19,11 @@
 form.formtastic .stringish input {
     width: 100%;
 }
+
+.team-is-out {
+    color: lightcoral;
+}
+
+.player-is-out {
+    color: lightcoral;
+}

@@ -105,14 +105,14 @@ namespace :load do
     end
 
     games = {
-        ["Oakland", "Houston", Time.utc(2017, 1, 7, 3, 35)] => {
+        ["Oakland", "Houston", Time.utc(2017, 1, 7, 3, 35), 14, 27] => {
             #                     PassTD PassInt RecvTD RushTD PassYds RecvYds RushYds Fmbl,  2PTPass 2PTRecv 2PTRush 0-39FGs 40-49FGs 50+FGs ExPt FGMiss
             "Michael Crabtree" => [ 0,     0,      0,     0,     0,      33,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
             "Lamar Miller" =>     [ 0,     0,      0,     1,     0,      0,      73,     0,     0,      0,      0,      0,      0,       0,     0,   0      ]
         },
 
         #                         PassTD PassInt RecvTD RushTD PassYds RecvYds RushYds Fmbl,  2PTPass 2PTRecv 2PTRush 0-39FGs 40-49FGs 50+FGs ExPt FGMiss
-        ["Detroit", "Seattle", Time.utc(2017, 1, 7, 7, 35)] => {
+        ["Detroit", "Seattle", Time.utc(2017, 1, 7, 7, 35), 6, 26] => {
             "Doug Baldwin" =>     [ 0,     0,      1,     0,     0,      104,    6,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
             "Jimmy Graham" =>     [ 0,     0,      0,     0,     0,      37,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
             "Steve Hauschka" =>   [ 0,     0,      0,     0,     0,      0,      0,      0,     0,      0,      0,      1,      1,       0,     2,   0      ],
@@ -121,7 +121,7 @@ namespace :load do
     }
 
     games.each do |opponents, scores|
-      visitor, home, time = opponents
+      visitor, home, time, visitor_score, home_score = opponents
       home_team = NflTeam.find_by_name(home)
       visiting_team = NflTeam.find_by_name(visitor)
       players_and_stats = scores.map{|player, stats| [Player.find_by_name(player), stats]}
@@ -144,7 +144,7 @@ namespace :load do
       game = Game.where(home_team: home_team, visiting_team: visiting_team).first
       if !game
         puts "creating game between: #{visitor} and #{home}"
-        game = Game.create(home_team: home_team, visiting_team: visiting_team, game_time: time)
+        game = Game.create(home_team: home_team, visiting_team: visiting_team, game_time: time, home_team_score: home_score, visiting_team_score: visitor_score)
         players_and_stats.each do |player, stats|
           puts "creating stat for player #{player.name}"
           game.game_scores <<

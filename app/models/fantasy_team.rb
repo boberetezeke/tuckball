@@ -14,12 +14,16 @@ class FantasyTeam < Team
     player
   end
 
-  def player_name_at_pos_and_score(pos)
+  def player_name_at_pos_and_score(view_context, pos)
     player = player_at_pos(pos)
-    "#{player.name} <strong>#{player.score}</strong>".html_safe
+    "#{view_context.link_to(player.name, player)} <strong>#{player.score}</strong>".html_safe
   end
 
   def score
     players.map(&:score).sum
+  end
+
+  def players_left
+    players.reject(&:is_out?).size
   end
 end

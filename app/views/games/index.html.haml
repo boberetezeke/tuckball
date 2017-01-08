@@ -7,13 +7,13 @@
         %thead
           %tr.row
             %th Date/Time
-            %th Home Team
             %th Visiting Team
+            %th Home Team
             %th Score
         %tbody
           - @games.each do |game|
             %tr.row
               %td= link_to(game.game_time.strftime("%m/%d %H:%M"), game)
-              %td= link_to(game.home_team.name, game.home_team)
               %td= link_to(game.visiting_team.name, game.visiting_team)
-              %td
+              %td= link_to(game.home_team.name, game.home_team)
+              %td #{game.visiting_team_score} - #{game.home_team_score}

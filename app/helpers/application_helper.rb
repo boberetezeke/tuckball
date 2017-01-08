@@ -34,4 +34,17 @@ module ApplicationHelper
       "Tuckball - Playoff Fantasy Football"
     end
   end
+
+  def player_link(player)
+    link_to(player.name, player, class: player.is_out? ? "player-is-out" : "")
+  end
+
+  def nfl_team_link(nfl_team)
+    link_to(nfl_team.name, nfl_team, class: nfl_team.is_out? ? "team-is-out" : "")
+  end
+
+  def player_name_at_pos_and_score(fantasy_team, pos)
+    player = fantasy_team.player_at_pos(pos)
+    "#{player_link(player)} <strong>#{player.score}</strong>".html_safe
+  end
 end

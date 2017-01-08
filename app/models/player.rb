@@ -12,4 +12,28 @@ class Player < ApplicationRecord
   def score
     game_scores.map(&:score).sum
   end
+
+  POSITION_VIEW_ORDER = {
+      "QB" => 0,
+      "RB" => 1,
+      "WR" => 2,
+      "TE" => 3,
+      "K" => 4
+  }
+
+  def position_view_order
+    POSITION_VIEW_ORDER[position]
+  end
+
+  def nfl_team
+    nfl_teams.first
+  end
+
+  def is_out?
+    nfl_team.is_out?
+  end
+
+  def games_played
+    game_scores.count
+  end
 end
