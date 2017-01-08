@@ -79,3 +79,8 @@ group :test do
   gem 'database_cleaner'
   gem 'rails-controller-testing'
 end
+
+
+group :production do
+  gem 'rails_12factor'
+end
