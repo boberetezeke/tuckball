@@ -2,6 +2,7 @@ namespace :load do
   desc "load up fantasy teams"
   task :fantasy_teams => :environment do
     teams = {
+=begin
         "Melanie" => {
             "QB"  => ["Matt Ryan",          "Atlanta"],
             "RB1" => ["Le'Veon Bell",       "Pittsburg"],
@@ -78,6 +79,16 @@ namespace :load do
             "K" =>   ["Steve Hauschka",     "Seattle"],
             "SB-Score" => 61
         },
+=end
+        "Ron" => {
+          "QB"  => ["Aaron Rodgers",      "Green Bay"],
+          "RB1" => ["Ezekiel Elliot",     "Dallas"],
+          "RB2" => ["LeGarrette Blount",  "New England"],
+          "WR1" => ["Tyrel Hill",         "Kansas City"],
+          "WR2" => ["Julio Jones",        "Atlanta"],
+          "TE" =>  ["Jimmy Graham",       "Seattle"],
+          "K" =>   ["Chris Boswell",      "Pittsburg"],
+        }
     }
 
 
@@ -117,6 +128,15 @@ namespace :load do
             "Jimmy Graham" =>     [ 0,     0,      0,     0,     0,      37,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
             "Steve Hauschka" =>   [ 0,     0,      0,     0,     0,      0,      0,      0,     0,      0,      0,      1,      1,       0,     2,   0      ],
             "Thomas Rawls" =>     [ 0,     0,      0,     1,     0,      33,     161,    0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        },
+
+        #                         PassTD PassInt RecvTD RushTD PassYds RecvYds RushYds Fmbl,  2PTPass 2PTRecv 2PTRush 0-39FGs 40-49FGs 50+FGs ExPt FGMiss
+        ["Miami", "Pittsburg", Time.utc(2018, 1, 8, 12, 05), 12, 30] => {
+            "Jay Ajayi" =>        [ 0,     0,      0,     0,     0,      12,     33,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+
+            "Le'Veon Bell" =>     [ 0,     0,      0,     2,     0,      7,      167,    0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+            "Antonio Brown" =>    [ 0,     0,      2,     0,     0,      0,      124,    0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+            "Chris Boswell" =>    [ 0,     0,      0,     0,     0,      0,      0,      0,     0,      0,      0,      1,      0,       0,     3,   0      ]
         }
     }
 
