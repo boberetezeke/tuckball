@@ -137,7 +137,16 @@ namespace :load do
             "Le'Veon Bell" =>     [ 0,     0,      0,     2,     0,      7,      167,    0,     0,      0,      0,      0,      0,       0,     0,   0      ],
             "Antonio Brown" =>    [ 0,     0,      2,     0,     0,      0,      124,    0,     0,      0,      0,      0,      0,       0,     0,   0      ],
             "Chris Boswell" =>    [ 0,     0,      0,     0,     0,      0,      0,      0,     0,      0,      0,      1,      0,       0,     3,   0      ]
-        }
+        },
+
+        #                         PassTD PassInt RecvTD RushTD PassYds RecvYds RushYds Fmbl,  2PTPass 2PTRecv 2PTRush 0-39FGs 40-49FGs 50+FGs ExPt FGMiss
+        ["New York", "Green Bay", Time.utc(2018, 1, 8, 15, 05), 13, 38] => {
+            "Odell Beckham Jr" => [ 0,     0,      0,     0,     0,      28,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+
+            "Aaron Rodgers" =>    [ 4,     0,      0,     0,     362,    0,      0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+            "Jared Cook" =>       [ 0,     0,      0,     0,     0,      48,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+            "Chris Boswell" =>    [ 0,     0,      0,     0,     0,      13,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ]
+        },
     }
 
     games.each do |opponents, scores|
