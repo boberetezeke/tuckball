@@ -43,8 +43,12 @@ module ApplicationHelper
     link_to(nfl_team.name, nfl_team, class: nfl_team.is_out? ? "team-is-out" : "")
   end
 
+  def fantasy_team_link(fantasy_team)
+    link_to(fantasy_team.name, fantasy_team)
+  end
+
   def player_name_at_pos_and_score(fantasy_team, pos)
     player = fantasy_team.player_at_pos(pos)
-    "#{player_link(player)} <strong>#{player.score}</strong>".html_safe
+    "#{player_link(player)} (#{player.nfl_team.abbrev}) <strong>#{player.score}</strong>".html_safe
   end
 end

@@ -3,6 +3,9 @@
     .panel-heading
       %h3= @player.name
     .panel-body
+      %h4 On Teams:
+      #{@player.fantasy_teams.map{|ft| fantasy_team_link(ft)}.join(", ").html_safe}
+      %h4 Game Stats:
       %table.table
         %thead
           %tr.row
