@@ -147,6 +147,18 @@ namespace :load do
             "Jared Cook" =>       [ 0,     0,      0,     0,     0,      48,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
             "Chris Boswell" =>    [ 0,     0,      0,     0,     0,      13,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ]
         },
+
+        #                         PassTD PassInt RecvTD RushTD PassYds RecvYds RushYds Fmbl,  2PTPass 2PTRecv 2PTRush 0-39FGs 40-49FGs 50+FGs ExPt FGMiss
+        ["Seattle", "Atlanta", Time.utc(2017, 1, 14, 15, 05), 13, 38] => {
+            "Doug Baldwin" =>     [ 0,     0,      1,     0,     0,      80,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+            "Jimmy Graham" =>     [ 0,     0,      1,     0,     0,      22,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+            "Thomas Rawls" =>     [ 0,     0,      0,     0,     0,      0,      34,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+            "Steve Hauschka" =>   [ 0,     0,      0,     0,     0,      0,      0,      0,     0,      0,      0,      2,      0,       0,     2,   0      ],
+
+            "Matt Ryan" =>        [ 3,     0,      0,     0,     338,    0,      0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+            "Julio Jones" =>      [ 0,     0,      1,     0,     0,      67,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+            "Matt Bryant" =>      [ 0,     0,      0,     0,     0,      0,      0,      0,     0,      0,      0,      2,      0,       0,     2,   0      ]
+        },
     }
 
     games.each do |opponents, scores|
