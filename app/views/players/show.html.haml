@@ -10,6 +10,7 @@
         %thead
           %tr.row
             %th Game
+            %th Week
             - if @player.position == "K"
               = render partial: 'shared/kicker_headings'
             - else
@@ -20,11 +21,13 @@
             - @player.game_scores.each do |game_score|
               %tr.row
                 %td= link_to(game_score.game.name, game_score.game)
+                %td= game_score.week_number
                 = render partial: 'shared/kicker_values', locals: { game_score: game_score }
                 %td= game_score.score
           - else
             - @player.game_scores.each do |game_score|
               %tr.row
                 %td= link_to(game_score.game.name, game_score.game)
+                %td= game_score.week_number
                 = render partial: 'shared/non_kicker_values', locals: { game_score: game_score }
                 %td= game_score.score

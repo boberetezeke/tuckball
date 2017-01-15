@@ -2,6 +2,8 @@ class GameScore < ApplicationRecord
   belongs_to :game
   belongs_to :player
 
+  scope :on_week, ->(week_number) { GameScore.joins(:game).merge(Game.on_week(week_number)) }
+
   STATS = {
     passing_tds:      ->(tds)  { tds * 4    },
     receiving_tds:    ->(tds)  { tds * 6    },
@@ -42,5 +44,9 @@ class GameScore < ApplicationRecord
       score += STATS[stat].call(self.send(stat))
     end
     score
+  end
+
+  def week_number
+    game.week_number
   end
 end

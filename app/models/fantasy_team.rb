@@ -23,6 +23,10 @@ class FantasyTeam < Team
     players.map(&:score).sum
   end
 
+  def score_for_week(week_number)
+    players.map{|p| p.score_for_week(week_number)}.sum
+  end
+
   def players_left
     players.reject(&:is_out?).size
   end

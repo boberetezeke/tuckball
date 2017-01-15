@@ -10,6 +10,8 @@
             %th Name
             %th NFL Team
             %th Games Played
+            - (1..4).each do |week_number|
+              %th= week_number
             %th Score
         %tbody
           - @fantasy_team.players.sort_by(&:position_view_order).each do |player|
@@ -18,4 +20,6 @@
               %td= player_link(player)
               %td= player.nfl_teams.first.name
               %td= player.games_played
+              - (1..4).each do |week_number|
+                %td= player.score_for_week(week_number)
               %td= player.score

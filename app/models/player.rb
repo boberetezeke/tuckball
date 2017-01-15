@@ -13,6 +13,10 @@ class Player < ApplicationRecord
     game_scores.map(&:score).sum
   end
 
+  def score_for_week(week_number)
+    game_scores.on_week(week_number).map(&:score).sum
+  end
+
   POSITION_VIEW_ORDER = {
       "QB" => 0,
       "RB" => 1,
