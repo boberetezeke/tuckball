@@ -131,7 +131,7 @@ namespace :load do
         },
 
         #                         PassTD PassInt RecvTD RushTD PassYds RecvYds RushYds Fmbl,  2PTPass 2PTRecv 2PTRush 0-39FGs 40-49FGs 50+FGs ExPt FGMiss
-        ["Miami", "Pittsburg", Time.utc(2018, 1, 8, 12, 05), 12, 30] => {
+        ["Miami", "Pittsburg", Time.utc(2017, 1, 8, 12, 05), 12, 30] => {
             "Jay Ajayi" =>        [ 0,     0,      0,     0,     0,      12,     33,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
 
             "Le'Veon Bell" =>     [ 0,     0,      0,     2,     0,      7,      167,    0,     0,      0,      0,      0,      0,       0,     0,   0      ],
@@ -140,7 +140,7 @@ namespace :load do
         },
 
         #                         PassTD PassInt RecvTD RushTD PassYds RecvYds RushYds Fmbl,  2PTPass 2PTRecv 2PTRush 0-39FGs 40-49FGs 50+FGs ExPt FGMiss
-        ["New York", "Green Bay", Time.utc(2018, 1, 8, 15, 05), 13, 38] => {
+        ["New York", "Green Bay", Time.utc(2017, 1, 8, 15, 05), 13, 38] => {
             "Odell Beckham Jr" => [ 0,     0,      0,     0,     0,      28,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
 
             "Aaron Rodgers" =>    [ 4,     0,      0,     0,     362,    0,      0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
@@ -158,6 +158,16 @@ namespace :load do
             "Matt Ryan" =>        [ 3,     0,      0,     0,     338,    0,      0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
             "Julio Jones" =>      [ 0,     0,      1,     0,     0,      67,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
             "Matt Bryant" =>      [ 0,     0,      0,     0,     0,      0,      0,      0,     0,      0,      0,      2,      0,       0,     2,   0      ]
+        },
+
+        #                         PassTD PassInt RecvTD RushTD PassYds RecvYds RushYds Fmbl,  2PTPass 2PTRecv 2PTRush 0-39FGs 40-49FGs 50+FGs ExPt FGMiss
+        ["Houston", "New England", Time.utc(2017, 1, 14, 7, 35), 16, 34] => {
+            #                     PassTD PassInt RecvTD RushTD PassYds RecvYds RushYds Fmbl,  2PTPass 2PTRecv 2PTRush 0-39FGs 40-49FGs 50+FGs ExPt FGMiss
+            "Lamar Miller" =>     [ 0,     0,      0,     0,     0,      16,     73,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+
+            "Tom Brady" =>        [ 2,     2,      0,     0,     287,    0,      0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+            "Martellius Bennet" => [ 0,    0,      0,     0,     0,      4,      0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+            "LeGarrette Blount" => [ 0,    0,      0,     0,     0,      0,      31,     0,     0,      0,      0,      0,      0,       0,     0,   0      ]
         },
     }
 
