@@ -2,7 +2,7 @@ class Game < ApplicationRecord
   belongs_to :home_team,      foreign_key: 'home_team_id',      class_name: 'NflTeam'
   belongs_to :visiting_team,  foreign_key: 'visiting_team_id',  class_name: 'NflTeam'
 
-  has_many :game_scores
+  has_many :game_scores, dependent: :destroy
 
   WEEKS = [
     { start_time: Time.utc(2017,1,6),   end_time: Time.utc(2017,1,9),  week_number: 1 },
