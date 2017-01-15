@@ -4,6 +4,8 @@ class Game < ApplicationRecord
 
   has_many :game_scores, dependent: :destroy
 
+  default_scope ->{ order('game_time ASC') }
+
   WEEKS = [
     { start_time: Time.utc(2017,1,6),   end_time: Time.utc(2017,1,9),  week_number: 1 },
     { start_time: Time.utc(2017,1,13),  end_time: Time.utc(2017,1,16), week_number: 2  },
