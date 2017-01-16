@@ -157,7 +157,7 @@ namespace :load do
 
             "Matt Ryan" =>        [ 3,     0,      0,     0,     338,    0,      0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
             "Julio Jones" =>      [ 0,     0,      1,     0,     0,      67,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
-            "Matt Bryant" =>      [ 0,     0,      0,     0,     0,      0,      0,      0,     0,      0,      0,      2,      0,       0,     2,   0      ]
+            "Matt Bryant" =>      [ 0,     0,      0,     0,     0,      0,      0,      0,     0,      0,      0,      2,      0,       0,     4,   0      ]
         },
 
         #                         PassTD PassInt RecvTD RushTD PassYds RecvYds RushYds Fmbl,  2PTPass 2PTRecv 2PTRush 0-39FGs 40-49FGs 50+FGs ExPt FGMiss
@@ -168,6 +168,15 @@ namespace :load do
             "Tom Brady" =>        [ 2,     2,      0,     0,     287,    0,      0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
             "Martellius Bennet" => [ 0,    0,      0,     0,     0,      4,      0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
             "LeGarrette Blount" => [ 0,    0,      0,     0,     0,      0,      31,     0,     0,      0,      0,      0,      0,       0,     0,   0      ]
+        },
+
+        #                         PassTD PassInt RecvTD RushTD PassYds RecvYds RushYds Fmbl,  2PTPass 2PTRecv 2PTRush 0-39FGs 40-49FGs 50+FGs ExPt FGMiss
+        ["Green Bay", "Dallas", Time.utc(2017, 1, 15, 15, 05), 34, 31] => {
+            "Aaron Rodgers" =>    [ 2,     1,      0,     0,     356,    0,      16,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+            "Jared Cook" =>       [ 0,     0,      1,     0,     0,      106,    0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+
+            "Ezekiel Elliot" =>   [ 0,     0,      0,     0,     0,      0,      125,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+            "Jason Witten" =>     [ 0,     0,      1,     0,     0,      59,     0,        0,     0,      0,      0,      0,      0,       0,     0,   0      ],
         },
     }
 
