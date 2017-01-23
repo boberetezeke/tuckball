@@ -182,12 +182,33 @@ namespace :load do
         #                         PassTD PassInt RecvTD RushTD PassYds RecvYds RushYds Fmbl,  2PTPass 2PTRecv 2PTRush 0-39FGs 40-49FGs 50+FGs ExPt FGMiss
         ["Pittsburg", "Kansas City", Time.utc(2017, 1, 15, 19, 05), 18, 16] => {
             "Le'Veon Bell" =>     [ 0,     0,      0,     0,     0,      0,      170,    0,     0,      0,      0,      0,      0,       0,     0,   0      ],
-            "Antonio Brown" =>    [ 0,     0,      2,     0,     0,      108,    0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+            "Antonio Brown" =>    [ 0,     0,      0,     0,     0,      108,    0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
             "Chris Boswell" =>    [ 0,     0,      0,     0,     0,      0,      0,      0,     0,      0,      0,      3,      3,       0,     0,   0      ],
 
             "Travis Kelce" =>     [ 0,     0,      0,     0,     0,      77,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
             "Tyrel Hill" =>       [ 0,     0,      0,     0,     0,      27,     18,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
             "Cairo Santos" =>     [ 0,     0,      0,     0,     0,      0,      0,      0,     0,      0,      0,      0,      1,       0,     1,   0      ]
+        },
+
+        #                         PassTD PassInt RecvTD RushTD PassYds RecvYds RushYds Fmbl,  2PTPass 2PTRecv 2PTRush 0-39FGs 40-49FGs 50+FGs ExPt FGMiss
+        ["Green Bay", "Atlanta", Time.utc(2017, 1, 22, 14, 05), 21, 44] => {
+            "Aaron Rodgers" =>    [ 3,     1,      0,     0,     287,    0,      46,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+            "Jared Cook" =>       [ 0,     0,      1,     0,     0,      78,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+
+            "Matt Ryan" =>        [ 4,     0,      0,     1,     392,    0,      23,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+            "Julio Jones" =>      [ 0,     0,      2,     0,     0,      180,    0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+            "Matt Bryant" =>      [ 0,     0,      0,     0,     0,      0,      0,      0,     0,      0,      0,      1,      0,       0,     5,   0      ]
+        },
+
+        #                         PassTD PassInt RecvTD RushTD PassYds RecvYds RushYds Fmbl,  2PTPass 2PTRecv 2PTRush 0-39FGs 40-49FGs 50+FGs ExPt FGMiss
+        ["Pittsburg", "New England", Time.utc(2017, 1, 22, 17, 05), 17, 36] => {
+            "Le'Veon Bell" =>     [ 0,     0,      0,     0,     0,      0,      20,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+            "Antonio Brown" =>    [ 0,     0,      0,     0,     0,      77,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+            "Chris Boswell" =>    [ 0,     0,      0,     0,     0,      0,      0,      0,     0,      0,      0,      1,      0,       0,     0,   0      ],
+
+            "Tom Brady" =>        [ 3,     0,      0,     0,     384,    0,      0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+            "Martellius Bennet" => [ 0,    0,      0,     0,     0,      32,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+            "LeGarrette Blount" => [ 0,    0,      0,     1,     0,      0,      47,     0,     0,      0,      0,      0,      0,       0,     0,   0      ]
         },
     }
 
