@@ -210,6 +210,17 @@ namespace :load do
             "Martellius Bennet" => [ 0,    0,      0,     0,     0,      32,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
             "LeGarrette Blount" => [ 0,    0,      0,     1,     0,      0,      47,     0,     0,      0,      0,      0,      0,       0,     0,   0      ]
         },
+        
+        #                         PassTD PassInt RecvTD RushTD PassYds RecvYds RushYds Fmbl,  2PTPass 2PTRecv 2PTRush 0-39FGs 40-49FGs 50+FGs ExPt FGMiss
+        ["Atlanta", "New England", Time.utc(2017, 2, 5, 17, 30), 21, 3] => {
+            "Matt Ryan" =>        [ 2,     0,      0,     0,     284,    0,      0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+            "Julio Jones" =>      [ 0,     0,      0,     0,     0,      87,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+            "Matt Bryant" =>      [ 0,     0,      0,     0,     0,      0,      0,      0,     0,      0,      0,      0,      0,       0,     3,   0      ],
+
+            "Tom Brady" =>         [ 0,    1,      0,     0,     466,    0,      0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+            "Martellius Bennet" => [ 0,    0,      0,     0,     0,      62,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+            "LeGarrette Blount" => [ 0,    0,      0,     0,     0,      0,      31,     0,     0,      0,      0,      0,      0,       0,     0,   0      ]
+        },
     }
 
     games.each do |opponents, scores|
