@@ -47,6 +47,7 @@ namespace :load do
         },
 
         "Jeff" => {
+
             "QB"  => ["Drew Brees",         "New Orleans"],
             "RB1" => ["Todd Gurley",        "Los Angeles"],
             "RB2" => ["Jay Ajai",           "Philadelphia"],
