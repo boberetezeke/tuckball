@@ -1,8 +1,8 @@
+=begin
 namespace :load do
   desc "load up fantasy teams"
   task :fantasy_teams => :environment do
     teams = {
-=begin
         "Melanie" => {
             "QB"  => ["Matt Ryan",          "Atlanta"],
             "RB1" => ["Le'Veon Bell",       "Pittsburg"],
@@ -79,7 +79,7 @@ namespace :load do
             "K" =>   ["Steve Hauschka",     "Seattle"],
             "SB-Score" => 61
         },
-=end
+
         "Ron" => {
           "QB"  => ["Aaron Rodgers",      "Green Bay"],
           "RB1" => ["Ezekiel Elliot",     "Dallas"],
@@ -277,3 +277,4 @@ namespace :load do
     end
   end
 end
+=end
