@@ -42,7 +42,7 @@ namespace :load do
             "WR1" => ["Adam Thielan",       "Minnesota"],
             "WR2" => ["Julio Jones",        "Atlanta"],
             "TE" =>  ["Travis Kelce",       "Kansas City"],
-            "K" =>   ["Gostokowski",        "New England"],
+            "K" =>   ["Stephen Gostokowski",        "New England"],
             "SB-Score" => 63
         },
 
@@ -50,7 +50,7 @@ namespace :load do
 
             "QB"  => ["Drew Brees",         "New Orleans"],
             "RB1" => ["Todd Gurley",        "Los Angeles"],
-            "RB2" => ["Jay Ajai",           "Philadelphia"],
+            "RB2" => ["Jay Ajayi",           "Philadelphia"],
             "WR1" => ["Juju Smith Schuster", "Pittsburg"],
             "WR2" => ["Adam Thielan",       "Minnesota"],
             "TE" =>  ["Travis Kelce",       "Kansas City"],
@@ -139,7 +139,48 @@ namespace :load do
             "Drew Brees" =>       [ 2,     0,      0,     0,     376,    0,      0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
             "Alvin Kamara" =>     [ 0,     0,      0,     1,     0,      10,     23,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
             "Michael Thomas" =>   [ 0,     0,      0,     0,     0,      131,    0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
-        }
+        },
+
+        ["Atlanta", "Philadelphia", Time.utc(2018, 1, 13, 3, 35), 26, 31] => {
+        #                         PassTD PassInt RecvTD RushTD PassYds RecvYds RushYds Fmbl,  2PTPass 2PTRecv 2PTRush 0-39FGs 40-49FGs 50+FGs ExPt FGMiss
+            "Devonte Freeman" =>  [ 0,     0,      1,     0,     0,      26,     7,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+            "Julio Jones" =>      [ 0,     0,      1,     0,     0,      101,    0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+            "Matt Bryant" =>      [ 0,     0,      0,     0,     0,      0,      0,      0,     0,      0,      0,      1,      0,       1,     2,   0      ],
+
+            "Jay Ajayi" =>        [ 0,     0,      1,     0,     0,      44,     54,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        },
+
+        ["Tennessee", "New England", Time.utc(2018, 1, 13, 7, 35), 14, 35] => {
+        #                         PassTD PassInt RecvTD RushTD PassYds RecvYds RushYds Fmbl,  2PTPass 2PTRecv 2PTRush 0-39FGs 40-49FGs 50+FGs ExPt FGMiss
+            "Ryan Sucoop" =>      [ 0,     0,      0,     0,     0,      0,      0,      0,     0,      0,      0,      0,      0,       0,     2,   0      ],
+
+            "Rob Gronkowski" =>   [ 0,     0,      1,     0,     0,      81,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+            "Deon Lewis" =>       [ 0,     0,      1,     0,     0,      79,     62,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+            "Stephen Gostokowski" =>      [ 0,     0,      0,     0,     0,      0,      0,      0,     0,      0,      0,      0,      0,       0,     5,   0      ],
+        },
+
+        ["Jacksonville", "Pittsburg", Time.utc(2018, 1, 14, 12, 05), 45, 42] => {
+        #                         PassTD PassInt RecvTD RushTD PassYds RecvYds RushYds Fmbl,  2PTPass 2PTRecv 2PTRush 0-39FGs 40-49FGs 50+FGs ExPt FGMiss
+            "Leonard Fournette" =>[ 0,     0,      0,     3,     0,      10,     109,    0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+            "Josh Lambo" =>       [ 0,     0,      0,     0,     0,      0,      0,      0,     0,      0,      0,      0,      1,       0,     6,   0      ],
+
+            "Ben Roethlisberger"=>[ 5,     1,      0,     0,     469,    0,      16,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+            "Antonio Brown" =>    [ 0,     0,      1,     0,     0,      81,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+            "Juju Smith Schuster" =>[ 0,   0,      0,     0,     0,      5,      0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+            "Le'Veon Bell" =>     [ 0,     0,      1,     1,     0,      81,     67,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        },
+
+        ["New Orleans", "Minnesota", Time.utc(2018, 1, 14, 15, 40), 24, 29] => {
+        #                         PassTD PassInt RecvTD RushTD PassYds RecvYds RushYds Fmbl,  2PTPass 2PTRecv 2PTRush 0-39FGs 40-49FGs 50+FGs ExPt FGMiss
+            "Drew Brees" =>       [ 3,     2,      0,     0,     294,    0,      1,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+            "Alvin Kamara" =>     [ 0,     0,      1,     0,     0,      62,     43,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+            "Michael Thomas" =>   [ 0,     0,      2,     0,     0,      85,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+
+            "Latavius Murray" => [ 0,     0,      0,     1,     0,      17,     50,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+            "Stefon Diggs" =>    [ 0,     0,      1,     0,     0,      137,    0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+            "Adam Thielan" =>    [ 0,     0,      0,     0,     0,      74,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+            "Kai Forbath" =>     [ 0,     0,      0,     0,     0,      0,      0,      0,     0,      0,      0,      1,      1,       1,     2,   0      ],
+        },
     }
 
     games.each do |opponents, scores|
