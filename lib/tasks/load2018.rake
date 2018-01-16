@@ -1,7 +1,26 @@
+namespace :destroy do
+  desc "delete games"
+  task :games => :environment do
+    Game.destroy_all
+    puts "deleted all games"
+  end
+end
+
 namespace :load do
   desc "load up fantasy teams"
   task :fantasy_teams => :environment do
     teams = {
+        "Pat" => {
+            "QB"  => ["Tom Brady",          "New England"],
+            "RB1" => ["Devonte Freeman",    "Atlanta"],
+            "RB2" => ["Todd Gurley",        "Los Angeles"],
+            "WR1" => ["Tyreek Hill",        "Kansas City"],
+            "WR2" => ["Antonio Brown",      "Pittsburg"],
+            "TE" =>  ["Kyle Rudolph",       "Minnesota"],
+            "K" =>   ["Will Lutz",          "New Orleans"],
+            "SB-Score" => 63
+        },
+
         "Melanie" => {
             "QB"  => ["Ben Roethlisberger", "Pittsburg"],
             "RB1" => ["Christian McCaffery","Carolina"],
@@ -83,21 +102,25 @@ namespace :load do
 
 
     teams.each do |person, team|
-      fantasy_team = FantasyTeam.create(name: person)
+      if FantasyTeam.find_by_name(person).nil?
+        fantasy_team = FantasyTeam.create(name: person)
 
-      team.each do |pos, (player_name, team_name)|
-        next if pos == "SB-Score"
+        puts "creating team for: #{person}"
+        team.each do |pos, (player_name, team_name)|
+          next if pos == "SB-Score"
 
-        pos = "WR" if pos == "WR1" || pos == "WR2"
-        pos = "RB" if pos == "RB1" || pos == "RB2"
-        player = Player.find_or_create_by(name: player_name, position: pos)
-        fantasy_team.players << player
+          pos = "WR" if pos == "WR1" || pos == "WR2"
+          pos = "RB" if pos == "RB1" || pos == "RB2"
+          player = Player.find_or_create_by(name: player_name, position: pos)
+          fantasy_team.players << player
 
-        nfl_team = NflTeam.find_or_create_by(name: team_name)
-        nfl_team.players << player
+          nfl_team = NflTeam.find_or_create_by(name: team_name)
+          nfl_team.players << player
+        end
       end
     end
   end
+
 
   desc "load up games"
   task :games => :environment do
@@ -139,6 +162,7 @@ namespace :load do
             "Drew Brees" =>       [ 2,     0,      0,     0,     376,    0,      0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
             "Alvin Kamara" =>     [ 0,     0,      0,     1,     0,      10,     23,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
             "Michael Thomas" =>   [ 0,     0,      0,     0,     0,      131,    0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+            "Will Lutz" =>         [ 0,     0,      0,     0,     0,      0,      0,      0,     0,      0,      0,      0,      0,       1,     4,   0      ],
         },
 
         ["Atlanta", "Philadelphia", Time.utc(2018, 1, 13, 3, 35), 26, 31] => {
@@ -154,6 +178,7 @@ namespace :load do
         #                         PassTD PassInt RecvTD RushTD PassYds RecvYds RushYds Fmbl,  2PTPass 2PTRecv 2PTRush 0-39FGs 40-49FGs 50+FGs ExPt FGMiss
             "Ryan Sucoop" =>      [ 0,     0,      0,     0,     0,      0,      0,      0,     0,      0,      0,      0,      0,       0,     2,   0      ],
 
+            "Tom Brady" =>        [ 3,     0,      0,     0,     337,    0,      2,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
             "Rob Gronkowski" =>   [ 0,     0,      1,     0,     0,      81,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
             "Deon Lewis" =>       [ 0,     0,      1,     0,     0,      79,     62,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
             "Stephen Gostokowski" =>      [ 0,     0,      0,     0,     0,      0,      0,      0,     0,      0,      0,      0,      0,       0,     5,   0      ],
@@ -175,10 +200,12 @@ namespace :load do
             "Drew Brees" =>       [ 3,     2,      0,     0,     294,    0,      1,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
             "Alvin Kamara" =>     [ 0,     0,      1,     0,     0,      62,     43,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
             "Michael Thomas" =>   [ 0,     0,      2,     0,     0,      85,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+            "Will Lutz" =>        [ 0,     0,      0,     0,     0,      0,      0,      0,     0,      0,      0,      0,      1,       0,     3,   0      ],
 
             "Latavius Murray" => [ 0,     0,      0,     1,     0,      17,     50,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
             "Stefon Diggs" =>    [ 0,     0,      1,     0,     0,      137,    0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
             "Adam Thielan" =>    [ 0,     0,      0,     0,     0,      74,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+            "Kyle Rudolph" =>    [ 0,     0,      0,     0,     0,      28,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
             "Kai Forbath" =>     [ 0,     0,      0,     0,     0,      0,      0,      0,     0,      0,      0,      1,      1,       1,     2,   0      ],
         },
     }
