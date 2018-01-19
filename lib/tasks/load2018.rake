@@ -4,6 +4,10 @@ namespace :destroy do
     Game.destroy_all
     puts "deleted all games"
   end
+  task :fantasy_teams => :environment do
+    FantasyTeam.destroy_all
+    puts "deleted all fantasy teams"
+  end
 end
 
 namespace :load do
@@ -196,7 +200,7 @@ namespace :load do
             "Will Lutz" =>        [ 0,     0,      0,     0,     0,      0,      0,      0,     0,      0,      0,      0,      1,       0,     3,   1      ],
             "Latavius Murray" => [ 0,     0,      0,     1,     0,      17,     50,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
             "Stefon Diggs" =>    [ 0,     0,      1,     0,     0,      137,    0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
-            "Adam Thielan" =>    [ 0,     0,      0,     0,     0,      74,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+            "Adam Thielen" =>    [ 0,     0,      0,     0,     0,      74,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
             "Kyle Rudolph" =>    [ 0,     0,      0,     0,     0,      28,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
             "Kai Forbath" =>     [ 0,     0,      0,     0,     0,      0,      0,      0,     0,      0,      0,      1,      1,       1,     2,   1      ],
         },
