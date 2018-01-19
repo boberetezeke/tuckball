@@ -170,7 +170,7 @@ namespace :load do
             "Devonte Freeman" =>  [ 0,     0,      1,     0,     0,      26,     7,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
             "Julio Jones" =>      [ 0,     0,      1,     0,     0,      101,    0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
             "Matt Bryant" =>      [ 0,     0,      0,     0,     0,      0,      0,      0,     0,      0,      0,      1,      0,       1,     2,   0      ],
-            "Jay Ajayi" =>        [ 0,     0,      1,     0,     0,      44,     54,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+            "Jay Ajayi" =>        [ 0,     0,      1,     0,     0,      44,     54,     1,     0,      0,      0,      0,      0,       0,     0,   0      ],
         },
 
         ["Tennessee", "New England", Time.utc(2018, 1, 13, 7, 35), 14, 35] => {
@@ -186,7 +186,7 @@ namespace :load do
         #                         PassTD PassInt RecvTD RushTD PassYds RecvYds RushYds Fmbl,  2PTPass 2PTRecv 2PTRush 0-39FGs 40-49FGs 50+FGs ExPt FGMiss
             "Leonard Fournette" =>[ 0,     0,      0,     3,     0,      10,     109,    0,     0,      0,      0,      0,      0,       0,     0,   0      ],
             "Josh Lambo" =>       [ 0,     0,      0,     0,     0,      0,      0,      0,     0,      0,      0,      0,      1,       0,     6,   0      ],
-            "Ben Roethlisberger"=>[ 5,     1,      0,     0,     469,    0,      16,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+            "Ben Roethlisberger"=>[ 5,     1,      0,     0,     469,    0,      16,     1,     0,      0,      0,      0,      0,       0,     0,   0      ],
             "Antonio Brown" =>    [ 0,     0,      1,     0,     0,      81,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
             "Juju Smith Schuster" =>[ 0,   0,      0,     0,     0,      5,      0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
             "Le'Veon Bell" =>     [ 0,     0,      1,     1,     0,      81,     67,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
@@ -194,7 +194,7 @@ namespace :load do
 
         ["New Orleans", "Minnesota", Time.utc(2018, 1, 14, 15, 40), 24, 29] => {
         #                         PassTD PassInt RecvTD RushTD PassYds RecvYds RushYds Fmbl,  2PTPass 2PTRecv 2PTRush 0-39FGs 40-49FGs 50+FGs ExPt FGMiss
-            "Drew Brees" =>       [ 3,     2,      0,     0,     294,    0,      1,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+            "Drew Brees" =>       [ 3,     2,      0,     0,     294,    0,      1,      1,     0,      0,      0,      0,      0,       0,     0,   0      ],
             "Alvin Kamara" =>     [ 0,     0,      1,     0,     0,      62,     43,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
             "Michael Thomas" =>   [ 0,     0,      2,     0,     0,      85,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
             "Will Lutz" =>        [ 0,     0,      0,     0,     0,      0,      0,      0,     0,      0,      0,      0,      1,       0,     3,   1      ],
