@@ -17,6 +17,8 @@ namespace :destroy do
     FantasyTeam.destroy_all
     NflTeam.destroy_all
     Player.destroy_all
+    NflTeamMembership.destroy_all
+    FantasyTeamMembership.destroy_all
     puts "destroyed all"
   end
 end
@@ -76,7 +78,7 @@ namespace :load do
             "QB"  => ["Jared Goff",         "Los Angeles"],
             "RB1" => ["Alvin Kamara",       "New Orleans"],
             "RB2" => ["Leonard Fournette",  "Jacksonville"],
-            "WR1" => ["Adam Thielan",       "Minnesota"],
+            "WR1" => ["Adam Thielen",       "Minnesota"],
             "WR2" => ["Julio Jones",        "Atlanta"],
             "TE" =>  ["Travis Kelce",       "Kansas City"],
             "K" =>   ["Stephen Gostkowski", "New England"],
@@ -89,7 +91,7 @@ namespace :load do
             "RB1" => ["Todd Gurley",        "Los Angeles"],
             "RB2" => ["Jay Ajayi",           "Philadelphia"],
             "WR1" => ["Juju Smith Schuster", "Pittsburgh"],
-            "WR2" => ["Adam Thielan",       "Minnesota"],
+            "WR2" => ["Adam Thielen",       "Minnesota"],
             "TE" =>  ["Travis Kelce",       "Kansas City"],
             "K" =>   ["Josh Lambo",         "Jacksonville"],
             "SB-Score" => 00
