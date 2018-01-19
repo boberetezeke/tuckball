@@ -16,11 +16,15 @@ namespace :destroy do
     Game.destroy_all
     FantasyTeam.destroy_all
     NflTeam.destroy_all
+    Player.destroy_all
     puts "destroyed all"
   end
 end
 
 namespace :load do
+  desc "load all the things"
+  task :all => [:fantasy_teams, :games]
+
   desc "load up fantasy teams"
   task :fantasy_teams => :environment do
     teams = {
