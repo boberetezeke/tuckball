@@ -8,6 +8,16 @@ namespace :destroy do
     FantasyTeam.destroy_all
     puts "deleted all fantasy teams"
   end
+  task :nfl_teams => :environment do
+    NflTeam.destroy_all
+    puts "deleted all fantasy teams"
+  end
+  task :all => :environment do
+    Game.destroy_all
+    FantasyTeam.destroy_all
+    NflTeam.destroy_all
+    puts "destroyed all"
+  end
 end
 
 namespace :load do
