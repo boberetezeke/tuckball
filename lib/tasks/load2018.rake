@@ -220,6 +220,28 @@ namespace :load do
             "Kyle Rudolph" =>    [ 0,     0,      0,     0,     0,      28,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
             "Kai Forbath" =>     [ 0,     0,      0,     0,     0,      0,      0,      0,     0,      0,      0,      1,      1,       1,     2,   1      ],
         },
+
+        ["Jacksonville", "New England", Time.utc(2018, 1, 21, 14, 00), 20, 24] => {
+        #                         PassTD PassInt RecvTD RushTD PassYds RecvYds RushYds Fmbl,  2PTPass 2PTRecv 2PTRush 0-39FGs 40-49FGs 50+FGs ExPt FGMiss
+            "Leonard Fournette" =>[ 0,     0,      0,     1,     0,      13,     76,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+            "Josh Lambo" =>       [ 0,     0,      0,     0,     0,      0,      0,      0,     0,      0,      0,      0,      1,       1,     2,   0      ],
+
+            "Tom Brady" =>        [ 2,     0,      0,     0,     290,    0,      0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+            "Rob Gronkowski" =>   [ 0,     0,      0,     0,     0,      21,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+            "Deon Lewis" =>       [ 0,     0,      0,     0,     0,      32,     34,     1,     0,      0,      0,      0,      0,       0,     0,   0      ],
+            "Stephen Gostkowski" =>[ 0,    0,      0,     0,     0,      0,      0,      0,     0,      0,      0,      1,      0,       0,     3,   1      ],
+        },
+
+        ["Minnesota", "Philadelphia", Time.utc(2018, 1, 21, 17, 30), 7, 38] => {
+        #                         PassTD PassInt RecvTD RushTD PassYds RecvYds RushYds Fmbl,  2PTPass 2PTRecv 2PTRush 0-39FGs 40-49FGs 50+FGs ExPt FGMiss
+            "Latavius Murray" => [ 0,     0,      0,     0,     0,      11,     18,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+            "Stefon Diggs" =>    [ 0,     0,      0,     0,     0,      70,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+            "Adam Thielen" =>    [ 0,     0,      0,     0,     0,      28,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+            "Kyle Rudolph" =>    [ 0,     0,      1,     0,     0,      25,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+            "Kai Forbath" =>     [ 0,     0,      0,     0,     0,      0,      0,      0,     0,      0,      0,      0,      0,       0,     1,   1      ],
+
+            "Jay Ajayi" =>        [ 0,     0,      1,     0,     0,      26,    73,     1,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        },
     }
 
     games.each do |opponents, scores|
