@@ -242,6 +242,16 @@ namespace :load do
 
             "Jay Ajayi" =>        [ 0,     0,      1,     0,     0,      26,    73,     1,     0,      0,      0,      0,      0,       0,     0,   0      ],
         },
+
+        ["New England", "Philadelphia", Time.utc(2018, 2, 4, 17, 30), 33, 41] => {
+            #                     PassTD PassInt RecvTD RushTD PassYds RecvYds RushYds Fmbl,  2PTPass 2PTRecv 2PTRush 0-39FGs 40-49FGs 50+FGs ExPt FGMiss
+            "Tom Brady" =>        [ 3,     0,      0,     0,     505,    0,      6,      1,     0,      0,      0,      0,      0,       0,     0,   0      ],
+            "Rob Gronkowski" =>   [ 0,     0,      2,     0,     0,      116,    0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+            "Deon Lewis" =>       [ 0,     0,      0,     0,     0,      32,     39,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+            "Stephen Gostkowski" =>[ 0,    0,      0,     0,     0,      0,      0,      0,     0,      0,      0,      1,      1,       0,     3,   1      ],
+
+            "Jay Ajayi" =>        [ 0,     0,      0,     0,     0,      0,      57,     1,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        },
     }
 
     games.each do |opponents, scores|
