@@ -1,36 +1,51 @@
 .row
-  .panel.panel-primary
-    .panel-heading
-      %h3 Fantasy Teams
-    .panel-body
-      %table.table
-        %thead
-          %tr.row
-            %th Name
-            %th QB
-            %th RB
-            %th RB
-            %th WR
-            %th WR
-            %th TE
-            %th K
-            %th Players Left
-            - (1..4).each do |week_number|
-              %th Week #{week_number}
-            %th Score
-        %tbody
-          - @fantasy_teams.sort_by(&:score).reverse.each do |fantasy_team|
-            %tr.row
-              %td= link_to(fantasy_team.name, fantasy_team)
-              %td= player_name_at_pos_and_score(fantasy_team, "QB")
-              %td= player_name_at_pos_and_score(fantasy_team, "RB1")
-              %td= player_name_at_pos_and_score(fantasy_team, "RB2")
-              %td= player_name_at_pos_and_score(fantasy_team, "WR1")
-              %td= player_name_at_pos_and_score(fantasy_team, "WR2")
-              %td= player_name_at_pos_and_score(fantasy_team, "TE")
-              %td= player_name_at_pos_and_score(fantasy_team, "K")
-              %td= fantasy_team.players_left
-              - (1..4).each do |week_number|
-                %td= fantasy_team.score_for_week(week_number)
-              %td
-                %strong= fantasy_team.score
+  %table.table
+    %thead
+      %tr.row
+        %th
+        %th{colspan: 7} Starters
+        %th
+        %th{colspan: 5} Backups
+      %tr.row
+        %th Name
+        %th QB
+        %th RB
+        %th RB
+        %th WR
+        %th WR
+        %th TE
+        %th K
+        %th
+        %th QB
+        %th RB
+        %th WR
+        %th TE
+        %th K
+        %th Starters Left
+        %th Backups Left
+        - (1..4).each do |week_number|
+          %th Week #{week_number}
+        %th Score
+    %tbody
+      - @fantasy_teams.sort_by(&:score).reverse.each do |fantasy_team|
+        %tr.row
+          %td= link_to(fantasy_team.name, fantasy_team)
+          %td= player_name_at_pos_and_score(fantasy_team, "QB")
+          %td= player_name_at_pos_and_score(fantasy_team, "RB1")
+          %td= player_name_at_pos_and_score(fantasy_team, "RB2")
+          %td= player_name_at_pos_and_score(fantasy_team, "WR1")
+          %td= player_name_at_pos_and_score(fantasy_team, "WR2")
+          %td= player_name_at_pos_and_score(fantasy_team, "TE")
+          %td= player_name_at_pos_and_score(fantasy_team, "K")
+          %td
+          %td= player_name_at_pos_and_score(fantasy_team, "QBB")
+          %td= player_name_at_pos_and_score(fantasy_team, "RBB")
+          %td= player_name_at_pos_and_score(fantasy_team, "WRB")
+          %td= player_name_at_pos_and_score(fantasy_team, "TEB")
+          %td= player_name_at_pos_and_score(fantasy_team, "KB")
+          %td= fantasy_team.starters_left
+          %td= fantasy_team.backups_left
+          - (1..4).each do |week_number|
+            %td= fantasy_team.score_for_week(week_number)
+          %td
+            %strong= fantasy_team.score
