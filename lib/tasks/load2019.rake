@@ -158,7 +158,7 @@ namespace :load do
         puts "creating team for: #{person}"
         team.each do |whole_pos, (player_name, team_name)|
           pos = whole_pos
-          pos = "QB" if whole_pos == "QB"
+          pos = "QB" if whole_pos == "QBB"
           pos = "WR" if whole_pos == "WR1" || whole_pos == "WR2" || whole_pos == "WRB"
           pos = "RB" if whole_pos == "RB1" || whole_pos == "RB2" || whole_pos == "RBB"
           pos = "TE" if whole_pos == "TEB"
