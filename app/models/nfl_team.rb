@@ -12,6 +12,14 @@ class NflTeam < Team
     games.select{ |game| game.lost_game?(self) }.present?
   end
 
+  def out_in_week?(week_number)
+    if week_number == 1
+      false
+    else
+      games.select{ |game| game.week_number == week_number }.blank?
+    end
+  end
+
   def abbrev
     if (splits = name.split(/ /)).size == 2
       splits.map{|s| s[0..0]}.join

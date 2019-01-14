@@ -3,7 +3,11 @@ Rails.application.routes.draw do
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  resources :fantasy_teams
+  resources :fantasy_teams do
+    member do
+      get :for_week
+    end
+  end
   resources :nfl_teams
   resources :players do
     collection do

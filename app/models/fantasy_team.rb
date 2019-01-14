@@ -32,11 +32,51 @@ class FantasyTeam < Team
   end
 
   def score
-    starters.map(&:score).sum
+    (1..4).map{|week_number| score_for_week(week_number) }.sum
+  end
+
+  def players_and_score_for_week(week_number)
+    players_and_scores = {}
+    players_ftms = fantasy_team_memberships.group_by(&:pos)
+    players_ftms.values.each do |ftms|
+      if starting_player_ftms(ftms).size > starting_player_ftms_still_playing_by_week(ftms, week_number).size
+        playing_ftms = starting_player_ftms_still_playing_by_week(ftms, week_number)
+        backup_ftms = backup_player_ftms(ftms)
+      else
+        playing_ftms = starting_player_ftms(ftms)
+        backup_ftms = []
+      end
+
+      playing_ftms.each do |ftm|
+        players_and_scores[ftm.player] = {score: ftm.player.score_for_week(week_number), pos: ftm.whole_pos}
+      end
+
+      backup_ftms.each do |ftm|
+        players_and_scores[ftm.player] = {score: ftm.player.score_for_week(week_number) / 2.0, pos: ftm.whole_pos}
+      end
+    end
+
+    players_and_scores
   end
 
   def score_for_week(week_number)
-    players.map{|p| p.score_for_week(week_number)}.sum
+    players_and_score_for_week(week_number).values.map{|info| info[:score]}.sum
+  end
+
+  def starting_player_ftms_still_playing_by_week(ftms, week_number)
+    starting_player_ftms(ftms).select{|ftm| !ftm.player.out_in_week?(week_number)}
+  end
+
+  def starting_player_ftms(ftms)
+    ftms.select{|ftm| STARTER_POS.include?(ftm.whole_pos)}
+  end
+
+  def backup_player_ftms(ftms)
+    ftms.select{|ftm| BACKUP_POS.include?(ftm.whole_pos)}
+  end
+
+  def starting_players_still_playing_by_week(ftms, week_number)
+
   end
 
   def players_left

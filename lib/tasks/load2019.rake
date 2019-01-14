@@ -60,7 +60,7 @@ namespace :load do
             "KB" =>  ["Will Lutz",          "New Orleans"],
         },
 
-        "Paul" => {
+        "Paul T" => {
             "QB"  => ["Patrick Mahomes",    "Kansas City"],
             "QBB" => ["Mitchell Trubisky",  "Chicago"],
             "RB1" => ["Jordan Howard",      "Chicago"],
@@ -73,6 +73,21 @@ namespace :load do
             "TEB" => ["Zach Ertz",          "Philadelphia"],
             "K" =>   ["Sebastian Janikowski", "Seattle"],
             "KB" =>  ["Justin Tucker",      "Baltimore"],
+        },
+
+        "Paul D" => {
+          "QB"  => ["Patrick Mahomes",    "Kansas City"],
+          "QBB" => ["Phillip Rivers",     "San Diego"],
+          "RB1" => ["Ezekiel Elliot",     "Dallas"],
+          "RB2" => ["Alvin Kamara",       "New Orleans"],
+          "RBB" => ["Todd Gurley",            "Los Angeles"],
+          "WR1" => ["DeAndre Hopkins",    "Houston"],
+          "WR2" => ["Tyreek Hill",            "Kansas City"],
+          "WRB" => ["Julian Edelman",     "New England"],
+          "TE" =>  ["Zach Ertz",          "Philadelphia"],
+          "TEB" => ["Travis Kelce",         "Kansas City"],
+          "K" =>   ["Stephen Gostokowski",  "New England"],
+          "KB" =>  ["Harrison Butker",        "Kansas City"],
         },
 
         "Ron" => {
@@ -129,8 +144,8 @@ namespace :load do
             "WR1" => ["TY Hilton",            "Indianapolis"],
             "WR2" => ["Michael Thomas",       "New Orleans"],
             "WRB" => ["DeAndre Hopkins",      "Houston"],
-            "TE" =>  ["Trey Burton",          "Chicago"],
-            "TEB" => ["Zach Ertz",            "Philadelphia"],
+            "TE" =>  ["Zach Ertz",            "Philadelphia"],
+            "TEB" => ["Trey Burton",          "Chicago"],
             "K" =>   ["Cody Parkey",          "Chicago"],
             "KB" =>  ["Stephen Gostokowski",  "New England"],
         }
@@ -182,6 +197,7 @@ namespace :load do
 
         ["San Diego", "Baltimore", Time.utc(2019, 1, 6, 12, 05), 23, 17] => {
         #                         PassTD PassInt RecvTD RushTD PassYds RecvYds RushYds Fmbl,  2PTPass 2PTRecv 2PTRush 0-39FGs 40-49FGs 50+FGs ExPt FGMiss
+        "Phillip Rivers" =>     [ 0,     0,      0,     0,     160,     0,     15,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
         "Keenan Allen" =>       [ 0,     0,      0,     0,     0,      37,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
         "Melvin Gordon" =>      [ 0,     0,      0,     1,     0,      0,      40,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
         "Lamar Jackson" =>      [ 2,     1,      0,     0,     194,    0,      54,     1,     0,      0,      0,      0,      0,       0,     0,   0      ],
@@ -191,11 +207,49 @@ namespace :load do
         ["Philadelphia", "Chicago", Time.utc(2019, 1, 6, 3, 35), 22, 21] => {
           #                         PassTD PassInt RecvTD RushTD PassYds RecvYds RushYds Fmbl,  2PTPass 2PTRecv 2PTRush 0-39FGs 40-49FGs 50+FGs ExPt FGMiss
           "Zach Ertz" =>          [ 0,     0,      0,     0,     0,      52,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
-          "Mitchell Trubisky" =>   [ 1,     0,      0,     0,     303,    0,      0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+          "Mitchell Trubisky" =>   [ 1,     0,      0,     0,    303,    0,      0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
           "Tarik Cohen" =>        [ 0,     0,      0,     0,     0,      27,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
           "Jordan Howard" =>      [ 0,     0,      0,     0,     0,      0,      35,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
           "Trey Burton" =>        [ 0,     0,      0,     0,     0,      0,      0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
           "Cody Parkey" =>        [ 0,     0,      0,     0,     0,      0,      0,      0,     0,      0,      0,      3,      0,       0,     0,   1      ],
+        },
+
+        ["Indianapolis", "Kansas City", Time.utc(2019, 1, 12, 3, 35), 13, 31] => {
+          #                         PassTD PassInt RecvTD RushTD PassYds RecvYds RushYds Fmbl,  2PTPass 2PTRecv 2PTRush 0-39FGs 40-49FGs 50+FGs ExPt FGMiss
+          "Andrew Luck" =>        [ 1,     0,      0,     0,     203,     0,     17,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+          "TY Hilton" =>          [ 0,     0,      1,     0,     0,      60,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+          "Patrick Mahomes" =>    [ 0,     0,      0,     0,     278,    0,      0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+          "Tyreek Hill" =>        [ 0,     0,      0,     1,     0,      72,     36,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+          "Travis Kelce" =>       [ 0,     0,      0,     0,     0,      108,    0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+          "Harrison Butker" =>    [ 0,     0,      0,     0,     0,      0,      0,      0,     0,      0,      0,      1,      0,       0,     4,   0      ],
+        },
+        ["Dallas", "Los Angeles", Time.utc(2019, 1, 12, 7, 35), 22, 30] => {
+          #                         PassTD PassInt RecvTD RushTD PassYds RecvYds RushYds Fmbl,  2PTPass 2PTRecv 2PTRush 0-39FGs 40-49FGs 50+FGs ExPt FGMiss
+          "Ezekiel Elliot" =>     [ 0,     0,      0,     1,     0,      19,     47,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+          "Amare Cooper" =>       [ 0,     0,      1,     0,     0,      65,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+          "Robert Woods" =>       [ 0,     0,      0,     0,     0,      69,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+          "Todd Gurley" =>        [ 0,     0,      0,     1,     0,      3,      115,    0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        },
+
+        ["San Diego", "New England", Time.utc(2019, 1, 13, 12, 15), 28, 41] => {
+          #                         PassTD PassInt RecvTD RushTD PassYds RecvYds RushYds Fmbl,  2PTPass 2PTRecv 2PTRush 0-39FGs 40-49FGs 50+FGs ExPt FGMiss
+          "Phillip Rivers" =>     [ 3,     1,      0,     0,     331,    0,      15,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+          "Keenan Allen" =>       [ 0,     0,      1,     0,     0,      75,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+          "Melvin Gordon" =>      [ 0,     0,      0,     1,     0,      11,     15,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+          "Tom Brady" =>          [ 1,     0,      0,     0,     343,    0,      0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+          "Gronkowski" =>         [ 0,     0,      0,     0,     0,      25,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+          "Julian Edelman" =>     [ 0,     0,      0,     1,     0,      151,    0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+          "Stephen Gostokowski" =>[ 0,     0,      0,     0,     0,      0,      0,      0,     0,      0,      0,      2,      0,       0,     5,   0      ],
+        },
+
+        ["Philadelphia", "New Orleans", Time.utc(2019, 1, 13, 3, 15), 14, 20] => {
+          #                         PassTD PassInt RecvTD RushTD PassYds RecvYds RushYds Fmbl,  2PTPass 2PTRecv 2PTRush 0-39FGs 40-49FGs 50+FGs ExPt FGMiss
+          "Zach Ertz" =>          [ 0,     0,      0,     0,     0,      50,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+          "Drew Brees" =>         [ 2,     1,      0,     0,     301,    0,      0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+          "Alvin Kamara" =>       [ 0,     0,      0,     0,     0,      23,     71,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+          "Michael Thomas" =>     [ 0,     0,      1,     0,     0,      171,    0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+          "Ben Watson" =>         [ 0,     0,      0,     0,     0,      12,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+          "Will Lutz" =>          [ 0,     0,      0,     0,     0,      0,      0,      0,     0,      0,      0,      1,      1,       0,     2,   1      ],
         },
     }
 

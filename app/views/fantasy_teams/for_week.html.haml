@@ -1,0 +1,24 @@
+.row
+  .panel.panel-primary
+    .panel-heading
+      %h3 #{@fantasy_team.name} for Week #{@week_number}
+    .panel-body
+      %table.table
+        %thead
+          %tr.row
+            %th Pos
+            %th Name
+            %th NFL Team
+            %th Score
+        %tbody
+          - @players_for_week.to_a.sort_by{|player, info| Player.position_view_order(info[:pos])}.each do |player, info|
+            %tr.row
+              %td= info[:pos]
+              %td= player_link(player)
+              %td= player.nfl_teams.first.name
+              %td= info[:score]
+          %tr.row
+            %td  Total
+            %td
+            %td
+            %td= @total

@@ -46,6 +46,6 @@
           %td= fantasy_team.starters_left
           %td= fantasy_team.backups_left
           - (1..4).each do |week_number|
-            %td= fantasy_team.score_for_week(week_number)
+            %td= link_to(fantasy_team.score_for_week(week_number), for_week_fantasy_team_path(fantasy_team, week_number: week_number))
           %td
             %strong= fantasy_team.score
