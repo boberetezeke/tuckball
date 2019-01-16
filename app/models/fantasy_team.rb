@@ -5,7 +5,13 @@ class FantasyTeam < Team
   default_scope ->{ order(:name) }
 
   def player_at_pos(pos)
-    fantasy_team_memberships.where(whole_pos: pos).first.player
+    ftm = fantasy_team_memberships.where(whole_pos: pos).first
+    if ftm
+      ftm.player
+    else
+      nil
+    end
+
     # if m = /^(.*)(\d)$/.match(pos)
     #   pos = m[1]
     #   player = players.order(:name).where(position: pos)[m[2].to_i - 1]
@@ -17,7 +23,11 @@ class FantasyTeam < Team
 
   def player_name_at_pos_and_score(view_context, pos)
     player = player_at_pos(pos)
-    "#{view_context.link_to(player.name, player)} <strong>#{player.score}</strong>".html_safe
+    if player
+      "#{view_context.link_to(player.name, player)} <strong>#{player.score}</strong>".html_safe
+    else
+      ""
+    end
   end
 
   STARTER_POS = ["QB", "RB1", "RB2", "WR1", "WR2", "TE", "K"]

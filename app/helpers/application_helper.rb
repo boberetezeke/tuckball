@@ -49,6 +49,10 @@ module ApplicationHelper
 
   def player_name_at_pos_and_score(fantasy_team, pos)
     player = fantasy_team.player_at_pos(pos)
-    "#{player_link(player)} (#{player.nfl_team.abbrev}) <strong>#{player.score}</strong>".html_safe
+    if player
+      "#{player_link(player)} (#{player.nfl_team.abbrev}) <strong>#{player.score}</strong>".html_safe
+    else
+      ""
+    end
   end
 end

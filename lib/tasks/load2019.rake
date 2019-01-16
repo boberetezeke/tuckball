@@ -38,7 +38,7 @@ namespace :load do
             "RBB" => ["Melvin Gordon",      "San Diego"],
             "WR1" => ["Julian Edelman",     "New England"],
             "WR2" => ["Robert Woods",       "Los Angeles"],
-            "WRB" => ["Robert Woods",       "Los Angeles"],
+            "WRB" => ["Tyreek Hill",        "Kansas City"],
             "TE" =>  ["Trey Burton",        "Chicago"],
             "TEB" => ["Ben Watson",         "New Orleans"],
             "K" =>   ["Ka'imi Fairbairn",   "Houston"],
@@ -82,7 +82,7 @@ namespace :load do
           "RB2" => ["Alvin Kamara",       "New Orleans"],
           "RBB" => ["Todd Gurley",            "Los Angeles"],
           "WR1" => ["DeAndre Hopkins",    "Houston"],
-          "WR2" => ["Tyreek Hill",            "Kansas City"],
+          #"WR2" => ["Tyreek Hill",            "Kansas City"],
           "WRB" => ["Julian Edelman",     "New England"],
           "TE" =>  ["Zach Ertz",          "Philadelphia"],
           "TEB" => ["Travis Kelce",         "Kansas City"],
@@ -97,7 +97,7 @@ namespace :load do
             "RB2" => ["Ezekiel Elliot",         "Dallas"],
             "RBB" => ["Jordan Howard",          "Chicago"],
             "WR1" => ["Michael Thomas",         "New Orleans"],
-            "WR2" => ["TY Hilton",              "Indianapolis"],
+            # "WR2" => ["TY Hilton",              "Indianapolis"],
             "WRB" => ["Tyreek Hill",            "Kansas City"],
             "TE" =>  ["Gronkowski",             "New England"],
             "TEB" => ["Ben Watson",             "New Orleans"],
@@ -123,7 +123,7 @@ namespace :load do
         "Greg" => {
             "QB"  => ["Lamar Jackson",    "Baltimore"],
             "QBB"  =>["Drew Brees",       "New Orleans"],
-            "RB1" => ["Alvin Kamera",     "New Orleans"],
+            "RB1" => ["Alvin Kamara",     "New Orleans"],
             "RB2" => ["Chris Carson",     "Seattle"],
             "RBB" => ["Ezekiel Elliot",   "Dallas"],
             "WR1" => ["Tyreek Hill",      "Kansas City"],
@@ -181,6 +181,7 @@ namespace :load do
             #                     PassTD PassInt RecvTD RushTD PassYds RecvYds RushYds Fmbl,  2PTPass 2PTRecv 2PTRush 0-39FGs 40-49FGs 50+FGs ExPt FGMiss
             "Andrew Luck" =>      [ 2,     1,      0,     0,     222,     0,     29,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
             "TY Hilton" =>        [ 0,     0,      0,     0,     0,      38,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+            "Eric Ebron" =>       [ 0,     0,      1,     0,     0,      26,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
             "DeAndre Hopkins" =>  [ 0,     0,      0,     0,     0,      37,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
             "Lamar Miller" =>     [ 0,     0,      0,     0,     0,      63,     18,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
             "Ka'imi Fairbairn" => [ 0,     0,      0,     0,     0,      0,      0,      0,     0,      0,      0,      0,      0,       0,     1,   0      ]
@@ -218,6 +219,7 @@ namespace :load do
           #                         PassTD PassInt RecvTD RushTD PassYds RecvYds RushYds Fmbl,  2PTPass 2PTRecv 2PTRush 0-39FGs 40-49FGs 50+FGs ExPt FGMiss
           "Andrew Luck" =>        [ 1,     0,      0,     0,     203,     0,     17,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
           "TY Hilton" =>          [ 0,     0,      1,     0,     0,      60,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+          "Eric Ebron" =>         [ 0,     0,      0,     0,     0,      51,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
           "Patrick Mahomes" =>    [ 0,     0,      0,     0,     278,    0,      0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
           "Tyreek Hill" =>        [ 0,     0,      0,     1,     0,      72,     36,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
           "Travis Kelce" =>       [ 0,     0,      0,     0,     0,      108,    0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
