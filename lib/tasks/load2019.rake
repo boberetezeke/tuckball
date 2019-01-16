@@ -220,11 +220,12 @@ namespace :load do
           "Andrew Luck" =>        [ 1,     0,      0,     0,     203,     0,     17,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
           "TY Hilton" =>          [ 0,     0,      1,     0,     0,      60,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
           "Eric Ebron" =>         [ 0,     0,      0,     0,     0,      51,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
-          "Patrick Mahomes" =>    [ 0,     0,      0,     0,     278,    0,      0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+          "Patrick Mahomes" =>    [ 0,     0,      0,     1,     278,    0,      8,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
           "Tyreek Hill" =>        [ 0,     0,      0,     1,     0,      72,     36,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
           "Travis Kelce" =>       [ 0,     0,      0,     0,     0,      108,    0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
           "Harrison Butker" =>    [ 0,     0,      0,     0,     0,      0,      0,      0,     0,      0,      0,      1,      0,       0,     4,   0      ],
         },
+
         ["Dallas", "Los Angeles", Time.utc(2019, 1, 12, 7, 35), 22, 30] => {
           #                         PassTD PassInt RecvTD RushTD PassYds RecvYds RushYds Fmbl,  2PTPass 2PTRecv 2PTRush 0-39FGs 40-49FGs 50+FGs ExPt FGMiss
           "Ezekiel Elliot" =>     [ 0,     0,      0,     1,     0,      19,     47,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
