@@ -177,7 +177,7 @@ namespace :load do
   desc "load up games"
   task :games => :environment do
     games = {
-        ["Indianapolis", "Houston", Time.utc(2019, 1, 5, 3, 35), 21, 7] => {
+        ["Indianapolis", "Houston", Time.utc(2019, 1, 5, 15, 35), 21, 7] => {
             #                     PassTD PassInt RecvTD RushTD PassYds RecvYds RushYds Fmbl,  2PTPass 2PTRecv 2PTRush 0-39FGs 40-49FGs 50+FGs ExPt FGMiss
             "Andrew Luck" =>      [ 2,     1,      0,     0,     222,     0,     29,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
             "TY Hilton" =>        [ 0,     0,      0,     0,     0,      38,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
@@ -187,7 +187,7 @@ namespace :load do
             "Ka'imi Fairbairn" => [ 0,     0,      0,     0,     0,      0,      0,      0,     0,      0,      0,      0,      0,       0,     1,   0      ]
         },
 
-        ["Seattle", "Dallas", Time.utc(2019, 1, 5, 7, 35), 22, 24] => {
+        ["Seattle", "Dallas", Time.utc(2019, 1, 5, 19, 35), 22, 24] => {
           #                         PassTD PassInt RecvTD RushTD PassYds RecvYds RushYds Fmbl,  2PTPass 2PTRecv 2PTRush 0-39FGs 40-49FGs 50+FGs ExPt FGMiss
           "Chris Carson" =>          [ 0,     0,      0,     0,     0,      0,      20,    0,     0,      0,      0,      0,      0,       0,     0,   0      ],
           "Sebastian Janikowski" =>  [ 0,     0,      0,     0,     0,      0,      0,     0,     0,      0,      0,      1,      1,       0,     0,   0      ],
@@ -205,7 +205,7 @@ namespace :load do
         "Justin Tucker" =>      [ 0,     0,      0,     0,     0,      0,      0,      0,     0,      0,      0,      0,      0,       0,     2,   0      ],
         },
 
-        ["Philadelphia", "Chicago", Time.utc(2019, 1, 6, 3, 35), 22, 21] => {
+        ["Philadelphia", "Chicago", Time.utc(2019, 1, 6, 15, 35), 22, 21] => {
           #                         PassTD PassInt RecvTD RushTD PassYds RecvYds RushYds Fmbl,  2PTPass 2PTRecv 2PTRush 0-39FGs 40-49FGs 50+FGs ExPt FGMiss
           "Zach Ertz" =>          [ 0,     0,      0,     0,     0,      52,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
           "Mitchell Trubisky" =>   [ 1,     0,      0,     0,    303,    0,      0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
@@ -226,7 +226,7 @@ namespace :load do
           "Harrison Butker" =>    [ 0,     0,      0,     0,     0,      0,      0,      0,     0,      0,      0,      1,      0,       0,     4,   0      ],
         },
 
-        ["Dallas", "Los Angeles", Time.utc(2019, 1, 12, 7, 35), 22, 30] => {
+        ["Dallas", "Los Angeles", Time.utc(2019, 1, 12, 19, 35), 22, 30] => {
           #                         PassTD PassInt RecvTD RushTD PassYds RecvYds RushYds Fmbl,  2PTPass 2PTRecv 2PTRush 0-39FGs 40-49FGs 50+FGs ExPt FGMiss
           "Ezekiel Elliot" =>     [ 0,     0,      0,     1,     0,      19,     47,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
           "Amare Cooper" =>       [ 0,     0,      1,     0,     0,      65,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
@@ -245,7 +245,7 @@ namespace :load do
           "Stephen Gostokowski" =>[ 0,     0,      0,     0,     0,      0,      0,      0,     0,      0,      0,      2,      0,       0,     5,   0      ],
         },
 
-        ["Philadelphia", "New Orleans", Time.utc(2019, 1, 13, 3, 15), 14, 20] => {
+        ["Philadelphia", "New Orleans", Time.utc(2019, 1, 13, 15, 15), 14, 20] => {
           #                         PassTD PassInt RecvTD RushTD PassYds RecvYds RushYds Fmbl,  2PTPass 2PTRecv 2PTRush 0-39FGs 40-49FGs 50+FGs ExPt FGMiss
           "Zach Ertz" =>          [ 0,     0,      0,     0,     0,      50,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
           "Drew Brees" =>         [ 2,     1,      0,     0,     301,    0,      0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
@@ -253,6 +253,28 @@ namespace :load do
           "Michael Thomas" =>     [ 0,     0,      1,     0,     0,      171,    0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
           "Ben Watson" =>         [ 0,     0,      0,     0,     0,      12,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
           "Will Lutz" =>          [ 0,     0,      0,     0,     0,      0,      0,      0,     0,      0,      0,      1,      1,       0,     2,   1      ],
+        },
+        ["New England", "Kansas City", Time.utc(2019, 1, 20, 19, 15), 37, 31] => {
+          #                         PassTD PassInt RecvTD RushTD PassYds RecvYds RushYds Fmbl,  2PTPass 2PTRecv 2PTRush 0-39FGs 40-49FGs 50+FGs ExPt FGMiss
+          "Patrick Mahomes" =>    [ 3,     0,      0,     0,     295,    0,      11,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+          "Tyreek Hill" =>        [ 0,     0,      0,     0,     0,      42,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+          "Travis Kelce" =>       [ 0,     0,      1,     0,     0,      23,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+          "Harrison Butker" =>    [ 0,     0,      0,     0,     0,      0,      0,      0,     0,      0,      0,      1,      0,       0,     4,   0      ],
+          "Tom Brady" =>          [ 1,     2,      0,     0,     348,    0,      0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+          "Gronkowski" =>         [ 0,     0,      0,     0,     0,      79,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+          "Julian Edelman" =>     [ 0,     0,      0,     1,     0,      96,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+          "Stephen Gostokowski" =>[ 0,     0,      0,     0,     0,      0,      0,      0,     0,      0,      0,      0,      1,       0,     4,   0      ],
+        },
+
+        ["Los Angeles", "New Orleans", Time.utc(2019, 1, 20, 15, 15), 14, 20] => {
+          #                         PassTD PassInt RecvTD RushTD PassYds RecvYds RushYds Fmbl,  2PTPass 2PTRecv 2PTRush 0-39FGs 40-49FGs 50+FGs ExPt FGMiss
+          "Robert Woods" =>       [ 0,     0,      0,     0,     0,      33,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+          "Todd Gurley" =>        [ 0,     0,      0,     1,     0,      3,      10,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+          "Drew Brees" =>         [ 2,     1,      0,     0,     249,    0,      0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+          "Alvin Kamara" =>       [ 0,     0,      0,     0,     0,      96,     15,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+          "Michael Thomas" =>     [ 0,     0,      0,     0,     0,      36,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+          "Ben Watson" =>         [ 0,     0,      0,     0,     0,      0,      0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+          "Will Lutz" =>          [ 0,     0,      0,     0,     0,      0,      0,      0,     0,      0,      0,      3,      0,       0,     2,   0      ],
         },
     }
 
