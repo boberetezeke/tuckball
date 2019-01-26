@@ -266,7 +266,7 @@ namespace :load do
           "Stephen Gostokowski" =>[ 0,     0,      0,     0,     0,      0,      0,      0,     0,      0,      0,      0,      1,       0,     4,   0      ],
         },
 
-        ["Los Angeles", "New Orleans", Time.utc(2019, 1, 20, 15, 15), 14, 20] => {
+        ["Los Angeles", "New Orleans", Time.utc(2019, 1, 20, 15, 15), 26, 23] => {
           #                         PassTD PassInt RecvTD RushTD PassYds RecvYds RushYds Fmbl,  2PTPass 2PTRecv 2PTRush 0-39FGs 40-49FGs 50+FGs ExPt FGMiss
           "Robert Woods" =>       [ 0,     0,      0,     0,     0,      33,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
           "Todd Gurley" =>        [ 0,     0,      0,     1,     0,      3,      10,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
