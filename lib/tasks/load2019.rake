@@ -276,6 +276,16 @@ namespace :load do
           "Ben Watson" =>         [ 0,     0,      0,     0,     0,      0,      0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
           "Will Lutz" =>          [ 0,     0,      0,     0,     0,      0,      0,      0,     0,      0,      0,      3,      0,       0,     2,   0      ],
         },
+
+        ["Los Angeles", "New England", Time.utc(2019, 2, 2, 17, 15), 3, 13] => {
+          #                         PassTD PassInt RecvTD RushTD PassYds RecvYds RushYds Fmbl,  2PTPass 2PTRecv 2PTRush 0-39FGs 40-49FGs 50+FGs ExPt FGMiss
+          "Robert Woods" =>       [ 0,     0,      0,     0,     0,      70,     5,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+          "Todd Gurley" =>        [ 0,     0,      0,     1,     0,      0,      35,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+          "Tom Brady" =>          [ 1,     2,      0,     0,     262,    0,      0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+          "Gronkowski" =>         [ 0,     0,      0,     0,     0,      87,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+          "Julian Edelman" =>     [ 0,     0,      0,     1,     0,      141,    0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+          "Stephen Gostokowski" =>[ 0,     0,      0,     0,     0,      0,      0,      0,     0,      0,      0,      0,      2,       0,     1,   1      ],
+        },
     }
 
     games.each do |opponents, scores|
