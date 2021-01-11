@@ -1,3 +1,4 @@
+=begin
 namespace :destroy do
   desc "delete games"
   task :games => :environment do
@@ -342,3 +343,4 @@ namespace :load do
     end
   end
 end
+=end
