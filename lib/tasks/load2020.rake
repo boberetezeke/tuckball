@@ -94,7 +94,7 @@ namespace :load do
         "QB"  => ["Tom Brady",             "Tampa Bay"],
         "QBB" => ["Patrick Mahomes",       "Kansas City"],
         "RB1" => ["Jonathon Taylor",       "Indianapolis"],
-        "RB2" => ["Alvin Kamara",          "New Orleans"],
+        "RB2" => ["Derrick Henry",         "Tennessee"],
         "RBB" => ["Nick Chubb",            "Cleveland"],
         "WR1" => ["Stefon Diggs",         "Buffalo"],
         "WR2" => ["Devante Adams",         "Green Bay"],
