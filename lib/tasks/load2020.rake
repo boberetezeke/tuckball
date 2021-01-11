@@ -41,7 +41,7 @@ namespace :load do
         "WRB" => ["AJ Brown",           "Tennessee"],
         "TE" =>  ["Mark Andrews",       "Baltimore"],
         "TEB" => ["Travis Kelce",       "Kansas City"],
-        "K" =>   ["Harrison Bukter",    "Kansas City"],
+        "K" =>   ["Harrison Butker",    "Kansas City"],
         "KB" =>  ["Justin Tucker",      "Baltimore"],
       },
 
@@ -62,17 +62,17 @@ namespace :load do
 
       "Gordy" => {
         "QB"  => ["Patrick Mahomes",    "Kansas City"],
-        "QBB" => ["Lemar Jackson",      "Baltimore"],
+        "QBB" => ["Lamar Jackson",      "Baltimore"],
         "RB1" => ["Derrick Henry",      "Tennessee"],
         "RB2" => ["JK Dobbins",         "Baltimore"],
-        "RBB" => ["Alviin Kamara",      "New Orleans"],
+        "RBB" => ["Alvin Kamara",      "New Orleans"],
         "WR1" => ["Stefon Diggs",      "Buffalo"],
         "WR2" => ["Devante Adams",      "Green Bay"],
         "WRB" => ["Tyrek Hill",         "Kansas City"],
         "TE" =>  ["Eric Ebron",         "Pittsburg"],
         "TEB" => ["Travis Kelce",       "Kansas City"],
         "K" =>   ["Will Lutz",          "New Orleans"],
-        "KB" =>  ["Harrison Bukter",    "Kansas City"],
+        "KB" =>  ["Harrison Butker",    "Kansas City"],
       },
 
       "Roger" => {
@@ -132,7 +132,7 @@ namespace :load do
         "TE" =>  ["Travis Kelce",          "Kansas City"],
         "TEB" => ["Robert Tonyan",         "Green Bay"],
         "K" =>   ["Justin Tucker",         "Baltimore"],
-        "KB" =>  ["Harrison Bukter",       "Kansas City"],
+        "KB" =>  ["Harrison Butker",       "Kansas City"],
       },
     }
 
