@@ -49,7 +49,7 @@ namespace :load do
         "QB"  => ["Patrick Mahomes",    "Kansas City"],
         "QBB" => ["Aaron Rodgers",      "Green Bay"],
         "RB1" => ["Alvin Kamara",       "New Orleans"],
-        "RB2" => ["Bradley Chubb",      "Cleveland"],
+        "RB2" => ["Nick Chubb",         "Cleveland"],
         "RBB" => ["Aaron Jones",        "Green Bay"],
         "WR1" => ["Devante Adams",      "Green Bay"],
         "WR2" => ["Stefon Diggs",      "Buffalo"],
@@ -209,6 +209,14 @@ namespace :load do
         #                     PassTD PassInt RecvTD RushTD PassYds RecvYds RushYds Fmbl,  2PTPass 2PTRecv 2PTRush 0-39FGs 40-49FGs 50+FGs ExPt FGMiss
         "Alvin Kamara" =>     [ 0,     0,      0,     1,      0,     17,      99,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
         "Will Lutz" =>        [ 0,     0,      0,     0,      0,     0,       0,      0,     0,      0,      0,      0,      0,       0,     3,   0      ],
+      },
+
+      ["Cleveland", "Pittsburg", Time.utc(2021, 1, 10, 19, 00), 48, 37] => {
+        #                     PassTD PassInt RecvTD RushTD PassYds RecvYds RushYds Fmbl,  2PTPass 2PTRecv 2PTRush 0-39FGs 40-49FGs 50+FGs ExPt FGMiss
+        "Baker Mayfield" =>    [ 3,     0,      0,     0,      263,   17,      0,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "Nick Chubb" =>        [ 0,     0,      1,     0,      0,     69,      76,    0,     0,      0,      0,      0,      0,       0,     3,   0      ],
+
+        "Eric Ebron" =>        [ 0,     0,      1,     0,      0,     62,       0,    0,     0,      0,      0,      0,      0,       0,     3,   0      ],
       },
     }
 
