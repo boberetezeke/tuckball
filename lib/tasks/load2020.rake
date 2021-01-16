@@ -35,7 +35,7 @@ namespace :load do
         "QBB" => ["Patrick Mahomes",    "Kansas City"],
         "RB1" => ["Derrick Henry",      "Tennessee"],
         "RB2" => ["Jonathon Taylor",    "Indianapolis"],
-        "RBB" => ["Alvin Kamara",       "San Diego"],
+        "RBB" => ["Alvin Kamara",       "New Orleans"],
         "WR1" => ["Chris Godwin",       "Tampa Bay"],
         "WR2" => ["DK Metcalf",         "Seattle"],
         "WRB" => ["AJ Brown",           "Tennessee"],
@@ -225,7 +225,7 @@ namespace :load do
         "Alvin Kamara" =>     [ 0,     0,      0,     1,      0,     17,      99,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
         "Will Lutz" =>        [ 0,     0,      0,     0,      0,     0,       0,      0,     0,      0,      0,      0,      0,       0,     3,   0      ],
 
-        "Allan Robinson" =>   [ 0,     0,      0,     0,      0,     55,      0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "Allen Robinson" =>   [ 0,     0,      0,     0,      0,     55,      0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
       },
 
       ["Cleveland", "Pittsburg", Time.utc(2021, 1, 10, 19, 00), 48, 37] => {
