@@ -134,9 +134,24 @@ namespace :load do
         "K" =>   ["Justin Tucker",         "Baltimore"],
         "KB" =>  ["Harrison Butker",       "Kansas City"],
       },
+
+      "Greg" => {
+        "QB"  => ["Josh Allen",               "Buffalo"],
+        "QBB" => ["Aaron Rodgers",            "Green Bay"],
+        "RB1" => ["Alvin Kamara",             "New Orleans"],
+        "RB2" => ["Derrick Henry",            "Tennessee"],
+        "RBB" => ["Aaron Jones",              "Green Bay"],
+        "WR1" => ["Allen Robinson",           "Chicago"],
+        "WR2" => ["Devante Adams",            "Green Bay"],
+        "WRB" => ["Marquez Valdez-Scantling", "Green Bay"],
+        "TE" =>  ["Travis Kelce",             "Kansas City"],
+        "TEB" => ["Robert Tonyan",            "Green Bay"],
+        "K" =>   ["Jason Myers",              "Seattle"],
+        "KB" =>  ["Mason Crosby",             "Green Bay"],
+      },
     }
 
-    ["Washington", "Chicago"].each do |nfl_team_name|
+    ["Washington"].each do |nfl_team_name|
       nfl_team = NflTeam.find_or_create_by(name: nfl_team_name)
     end
 
@@ -209,6 +224,8 @@ namespace :load do
         #                     PassTD PassInt RecvTD RushTD PassYds RecvYds RushYds Fmbl,  2PTPass 2PTRecv 2PTRush 0-39FGs 40-49FGs 50+FGs ExPt FGMiss
         "Alvin Kamara" =>     [ 0,     0,      0,     1,      0,     17,      99,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
         "Will Lutz" =>        [ 0,     0,      0,     0,      0,     0,       0,      0,     0,      0,      0,      0,      0,       0,     3,   0      ],
+
+        "Allan Robinson" =>   [ 0,     0,      0,     0,      0,     55,      0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
       },
 
       ["Cleveland", "Pittsburg", Time.utc(2021, 1, 10, 19, 00), 48, 37] => {
