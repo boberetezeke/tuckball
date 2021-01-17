@@ -240,7 +240,7 @@ namespace :load do
         #                     PassTD PassInt RecvTD RushTD PassYds RecvYds RushYds Fmbl,  2PTPass 2PTRecv 2PTRush 0-39FGs 40-49FGs 50+FGs ExPt FGMiss
         "Matt Gay" =>         [ 0,     0,      0,     0,      0,     0,      0,     0,     0,      0,      0,      1,      0,       0,     1,   0      ],
 
-        "Aaron Rodgers" =>    [ 2,     0,      1,     1,      296,    0,       0,    0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "Aaron Rodgers" =>    [ 2,     0,      0,     1,      296,    0,       0,    0,     0,      0,      0,      0,      0,       0,     0,   0      ],
         "Aaron Jones" =>      [ 0,     0,      0,     1,      0,     14,       99,   0,     0,      0,      0,      0,      0,       0,     0,   0      ],
         "Devante Adams" =>    [ 0,     0,      1,     0,      0,     66,       0,    0,     0,      0,      0,      0,      0,       0,     0,   0      ],
         "Robert Tonyan" =>    [ 0,     0,      0,     0,      0,     60,       0,    0,     0,      0,      0,      0,      0,       0,     0,   0      ],
