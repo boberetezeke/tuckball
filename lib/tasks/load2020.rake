@@ -236,7 +236,7 @@ namespace :load do
         "Eric Ebron" =>        [ 0,     0,      1,     0,      0,     62,       0,    0,     0,      0,      0,      0,      0,       0,     3,   0      ],
       },
 
-      ["Los Angeles", "Green Bay", Time.utc(2021, 1, 17, 15, 30), 48, 37] => {
+      ["Los Angeles", "Green Bay", Time.utc(2021, 1, 17, 15, 30), 18, 32] => {
         #                     PassTD PassInt RecvTD RushTD PassYds RecvYds RushYds Fmbl,  2PTPass 2PTRecv 2PTRush 0-39FGs 40-49FGs 50+FGs ExPt FGMiss
         "Matt Gay" =>         [ 0,     0,      0,     0,      0,     0,      0,     0,     0,      0,      0,      1,      0,       0,     1,   0      ],
 
@@ -247,7 +247,7 @@ namespace :load do
         "Mason Crosby" =>     [ 0,     0,      0,     0,      0,     0,        0,    0,     0,      0,      0,      2,      0,       0,     2,   0      ],
       },
 
-      ["Baltimore", "Buffalo", Time.utc(2021, 1, 17, 19, 00), 48, 37] => {
+      ["Baltimore", "Buffalo", Time.utc(2021, 1, 17, 19, 00), 3, 17] => {
         #                     PassTD PassInt RecvTD RushTD PassYds RecvYds RushYds Fmbl,  2PTPass 2PTRecv 2PTRush 0-39FGs 40-49FGs 50+FGs ExPt FGMiss
         "Lamar Jackson" =>     [ 0,     1,      0,     0,      162,   0,      34,    0,     0,      0,      0,      0,      0,       0,     0,   0      ],
         "JK Dobbins" =>        [ 0,     0,      0,     0,      0,     51,     42,    0,     0,      0,      0,      0,      0,       0,     0,   0      ],
