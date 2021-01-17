@@ -31,7 +31,7 @@ namespace :load do
   task :fantasy_teams => :environment do
     teams = {
       "Melanie" => {
-        "QB"  => ["Josh Allen",         "Bufallo"],
+        "QB"  => ["Josh Allen",         "Buffalo"],
         "QBB" => ["Patrick Mahomes",    "Kansas City"],
         "RB1" => ["Derrick Henry",      "Tennessee"],
         "RB2" => ["Jonathon Taylor",    "Indianapolis"],
@@ -52,12 +52,12 @@ namespace :load do
         "RB2" => ["Nick Chubb",         "Cleveland"],
         "RBB" => ["Aaron Jones",        "Green Bay"],
         "WR1" => ["Devante Adams",      "Green Bay"],
-        "WR2" => ["Stefon Diggs",      "Buffalo"],
+        "WR2" => ["Stefon Diggs",       "Buffalo"],
         "WRB" => ["Tyrek Hill",         "Kansas City"],
         "TE" =>  ["Mark Andrews",       "Baltimore"],
         "TEB" => ["Travis Kelce",       "Kansas City"],
         "K" =>   ["Jason Meyers",       "Seattle"],
-        "KB" =>  ["Tyler Bass",         "Bufallo"],
+        "KB" =>  ["Tyler Bass",         "Buffalo"],
       },
 
       "Gordy" => {
@@ -65,8 +65,8 @@ namespace :load do
         "QBB" => ["Lamar Jackson",      "Baltimore"],
         "RB1" => ["Derrick Henry",      "Tennessee"],
         "RB2" => ["JK Dobbins",         "Baltimore"],
-        "RBB" => ["Alvin Kamara",      "New Orleans"],
-        "WR1" => ["Stefon Diggs",      "Buffalo"],
+        "RBB" => ["Alvin Kamara",       "New Orleans"],
+        "WR1" => ["Stefon Diggs",       "Buffalo"],
         "WR2" => ["Devante Adams",      "Green Bay"],
         "WRB" => ["Tyrek Hill",         "Kansas City"],
         "TE" =>  ["Eric Ebron",         "Pittsburg"],
@@ -122,7 +122,7 @@ namespace :load do
 
       "Steve" => {
         "QB"  => ["Aaron Rodgers",         "Green Bay"],
-        "QBB" => ["Lamar Jackson",       "Baltimore"],
+        "QBB" => ["Lamar Jackson",         "Baltimore"],
         "RB1" => ["Alvin Kamara",          "New Orleans"],
         "RB2" => ["Nick Chubb",            "Cleveland"],
         "RBB" => ["Chris Carson",          "Seattle"],
@@ -235,6 +235,29 @@ namespace :load do
 
         "Eric Ebron" =>        [ 0,     0,      1,     0,      0,     62,       0,    0,     0,      0,      0,      0,      0,       0,     3,   0      ],
       },
+
+      ["Los Angeles", "Green Bay", Time.utc(2021, 1, 17, 15, 30), 48, 37] => {
+        #                     PassTD PassInt RecvTD RushTD PassYds RecvYds RushYds Fmbl,  2PTPass 2PTRecv 2PTRush 0-39FGs 40-49FGs 50+FGs ExPt FGMiss
+        "Matt Gay" =>         [ 0,     0,      0,     0,      0,     0,      0,     0,     0,      0,      0,      1,      0,       0,     1,   0      ],
+
+        "Aaron Rodgers" =>    [ 2,     0,      1,     1,      296,    0,       0,    0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "Aaron Jones" =>      [ 0,     0,      0,     1,      0,     14,       99,   0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "Devante Adams" =>    [ 0,     0,      1,     0,      0,     66,       0,    0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "Robert Tonyan" =>    [ 0,     0,      0,     0,      0,     60,       0,    0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "Mason Crosby" =>     [ 0,     0,      0,     0,      0,     0,        0,    0,     0,      0,      0,      2,      0,       0,     2,   0      ],
+      },
+
+      ["Baltimore", "Buffalo", Time.utc(2021, 1, 17, 19, 00), 48, 37] => {
+        #                     PassTD PassInt RecvTD RushTD PassYds RecvYds RushYds Fmbl,  2PTPass 2PTRecv 2PTRush 0-39FGs 40-49FGs 50+FGs ExPt FGMiss
+        "Lamar Jackson" =>     [ 0,     1,      0,     0,      162,   0,      34,    0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "JK Dobbins" =>        [ 0,     0,      0,     0,      0,     51,     42,    0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "Mark Andrews" =>      [ 0,     0,      0,     0,      0,     28,     0,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "Justin Tucker" =>     [ 0,     0,      0,     0,      0,     0,      0,     0,     0,      0,      0,      1,      0,       0,     0,   2      ],
+
+        "Josh Allen" =>       [ 1,     0,      0,     0,      206,   0,      3,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "Stefon Diggs" =>     [ 0,     0,      1,     0,      0,     106,    0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "Tyler Bass" =>       [ 0,     0,      0,     0,      0,     0,      0,      0,     0,      0,      0,      1,      0,       0,     2,   2      ],
+      }
     }
 
     games.each do |opponents, scores|
