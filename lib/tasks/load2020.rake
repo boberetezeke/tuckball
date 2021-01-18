@@ -271,15 +271,16 @@ namespace :load do
         "Harrison Butker" =>   [ 0,     0,      0,     0,      0,     0,       0,     0,     0,      0,      0,      2,      0,       1,     1,   1      ],
       },
 
-      # ["Tampa Bay", "New Orleans", Time.utc(2021, 1, 17, 18, 00), 17, 22] => {
-      #   "Tom Brady" =>        [ 0,     0,      0,     0,      0,     0,      0,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
-      #   "Mike Evans" =>       [ 0,     0,      0,     0,      0,     0,      0,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
-      #   "Chris Godwin" =>     [ 0,     0,      0,     0,      0,     0,      0,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
-      #   "Rob Gronkowski" =>   [ 0,     0,      0,     0,      0,     0,      0,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
-      #
-      #   "Alvin Kamara" =>     [ 0,     0,      0,     1,      0,     0,      0,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
-      #   "Will Lutz" =>        [ 0,     0,      0,     0,      0,     0,      0,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
-      # }
+      ["Tampa Bay", "New Orleans", Time.utc(2021, 1, 17, 18, 00), 17, 22] => {
+        #                     PassTD PassInt RecvTD RushTD PassYds RecvYds RushYds Fmbl,  2PTPass 2PTRecv 2PTRush 0-39FGs 40-49FGs 50+FGs ExPt FGMiss
+        "Tom Brady" =>        [ 2,     0,      0,     1,      199,   0,      2,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "Mike Evans" =>       [ 0,     0,      1,     0,      0,     3,      0,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "Chris Godwin" =>     [ 0,     0,      0,     0,      0,     34,     0,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "Rob Gronkowski" =>   [ 0,     0,      0,     0,      0,     14,     0,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+
+        "Alvin Kamara" =>     [ 0,     0,      0,     1,      0,     20,     85,    0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "Will Lutz" =>        [ 0,     0,      0,     0,      0,     0,      0,     0,     0,      0,      0,      1,      1,       0,     2,   0      ],
+      }
 
     }
 
