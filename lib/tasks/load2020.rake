@@ -280,7 +280,33 @@ namespace :load do
 
         "Alvin Kamara" =>     [ 0,     0,      0,     1,      0,     20,     85,    0,     0,      0,      0,      0,      0,       0,     0,   0      ],
         "Will Lutz" =>        [ 0,     0,      0,     0,      0,     0,      0,     0,     0,      0,      0,      1,      1,       0,     2,   0      ],
-      }
+      },
+
+      ["Tampa Bay", "Green Bay", Time.utc(2021, 1, 24, 14, 00), 31, 26] => {
+        #                     PassTD PassInt RecvTD RushTD PassYds RecvYds RushYds Fmbl,  2PTPass 2PTRecv 2PTRush 0-39FGs 40-49FGs 50+FGs ExPt FGMiss
+        "Tom Brady" =>        [ 3,     3,      0,     0,      280,   0,      0,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "Mike Evans" =>       [ 0,     0,      1,     0,      0,     51,     0,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "Chris Godwin" =>     [ 0,     0,      0,     0,      0,     110,    6,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "Rob Gronkowski" =>   [ 0,     0,      0,     0,      0,     29,     0,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+
+        "Aaron Rodgers" =>    [ 3,     1,      0,     0,      346,    0,       0,    0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "Aaron Jones" =>      [ 0,     0,      0,     0,      0,      7,       27,   0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "Devante Adams" =>    [ 0,     0,      1,     0,      0,     67,       0,    0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "Robert Tonyan" =>    [ 0,     0,      1,     0,      0,     22,       0,    0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "Mason Crosby" =>     [ 0,     0,      0,     0,      0,     0,        0,    0,     0,      0,      0,      2,      0,       0,     2,   0      ],
+      },
+
+      ["Buffalo", "Kansas City", Time.utc(2021, 1, 24, 17, 00), 24, 38] => {
+        #                     PassTD PassInt RecvTD RushTD PassYds RecvYds RushYds Fmbl,  2PTPass 2PTRecv 2PTRush 0-39FGs 40-49FGs 50+FGs ExPt FGMiss
+        "Josh Allen" =>       [ 2,     1,      0,     0,      287,   0,      88,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "Stefon Diggs" =>     [ 0,     0,      0,     0,      0,     77,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "Tyler Bass" =>       [ 0,     0,      0,     0,      0,     0,      0,      0,     0,      0,      0,      2,      0,       2,     0,   0      ],
+
+        "Patrick Mahomes" =>   [ 3,     0,      0,     1,      325,   0,       8,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "Travis Kelce" =>      [ 0,     0,      2,     0,      0,     118,     0,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "Tyrek Hill" =>        [ 0,     0,      0,     0,      0,     172,     0,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "Harrison Butker" =>   [ 0,     0,      0,     0,      0,     0,       0,     0,     0,      0,      0,      0,      1,       0,     5,   0      ],
+      },
 
     }
 
