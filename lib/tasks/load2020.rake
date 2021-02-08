@@ -308,6 +308,18 @@ namespace :load do
         "Harrison Butker" =>   [ 0,     0,      0,     0,      0,     0,       0,     0,     0,      0,      0,      0,      1,       0,     5,   0      ],
       },
 
+      ["Kansas City", "Tampa Bay" , Time.utc(2021, 2, 7, 17, 30), 9, 31] => {
+        #                     PassTD PassInt RecvTD RushTD PassYds RecvYds RushYds Fmbl,  2PTPass 2PTRecv 2PTRush 0-39FGs 40-49FGs 50+FGs ExPt FGMiss
+        "Tom Brady" =>         [ 3,     0,      0,     0,      201,   0,      0,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "Mike Evans" =>        [ 0,     0,      0,     0,      0,     31,     0,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "Chris Godwin" =>      [ 0,     0,      0,     0,      0,     9,      0,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "Rob Gronkowski" =>    [ 0,     0,      2,     0,      0,     67,     0,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+
+        "Patrick Mahomes" =>   [ 0,     1,      0,     1,      212,   0,       8,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "Travis Kelce" =>      [ 0,     0,      0,     0,      0,     117,     0,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "Tyrek Hill" =>        [ 0,     0,      0,     0,      0,     61,      0,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "Harrison Butker" =>   [ 0,     0,      0,     0,      0,     0,       0,     0,     0,      0,      0,      1,      1,       1,     0,   0      ],
+      },
     }
 
     games.each do |opponents, scores|
