@@ -102,7 +102,7 @@ namespace :load do
         "TE" =>  ["Travis Kelce",          "Kansas City"],
         "TEB" => ["Rob Gronkowski",        "Tampa Bay"],
         "K" =>   ["Rodrigo Blankenship",   "Indianapolis"],
-        "KB" =>  ["Cairo Santos",          "Chicago Bears"],
+        "KB" =>  ["Cairo Santos",          "Chicago"],
       },
 
       "Pat" => {
