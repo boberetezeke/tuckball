@@ -151,6 +151,10 @@ namespace :load do
       },
     }
 
+    injuries = {
+      "Leonard Fournette" => [1]
+    }
+
     teams.each do |person, team|
       if FantasyTeam.find_by_name(person).nil?
         fantasy_team = FantasyTeam.create(name: person)
@@ -169,6 +173,15 @@ namespace :load do
           nfl_team = NflTeam.find_or_create_by(name: team_name)
           nfl_team.players << player
         end
+      end
+    end
+
+    injuries.each do |name, weeks_out|
+      player = Player.find_by_name(name)
+      if player
+        player.update(weeks_out: weeks_out)
+      else
+        puts "ERROR: can't find player for injuries: #{name}"
       end
     end
   end
@@ -204,7 +217,7 @@ namespace :load do
         "Miles Sanders" => [  0,     0,      0,     0,      0,     16,     12,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
 
         "Tom Brady" =>     [ 2,     0,      0,     0,      271,   0,      0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
-        "Leonard Fournette" => [ 0, 0,      0,     2,      0,     0,      0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "Leonard Fournette" => [ 0, 0,      0,     0,      0,     0,      0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
         "Mike Evans" =>   [ 0,      0,      1,     0,      0,     117,    0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
         "Rob Gronkowski" => [ 0,    0,      1,     0,      0,     31,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
         "Ryan Succop" =>  [ 0,      0,      0,     0,      0,     0,      0,      0,     0,      0,      0,      1,      0,       0,     4,   0      ],
@@ -233,6 +246,15 @@ namespace :load do
         "Travis Kelce" =>   [  1,      0,      1,     0,      2,     108,    0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
         "Harrison Butker" =>  [ 0,     0,      0,     0,      0,     0,      0,      0,     0,      0,      0,      0,      0,       0,     6,   0      ],
       },
+
+      ["Arizona", "Los Angeles", Time.utc(2022, 1, 17, 19, 00), 11, 34] => {
+        #                     PassTD PassInt RecvTD RushTD PassYds RecvYds RushYds Fmbl,  2PTPass 2PTRecv 2PTRush 0-39FGs 40-49FGs 50+FGs ExPt FGMiss
+        "Zach Ertz" =>    [ 0,      0,      0,     0,      0,     21,     0,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "Matt Prater" =>  [ 0,      0,      0,     0,      0,     0,      0,     0,     0,      0,      0,      0,      0,       0,     1,   0      ],
+
+        "Sony Michel" =>  [  0,      0,      0,     0,      0,     0,     58,      0,     0,      0,      0,      0,      0,       0,     0,   0    ],
+        "Cooper Kupp" =>  [  0,      0,      1,     0,      0,     61,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0    ],
+      },
     }
 
     games.each do |opponents, scores|
@@ -242,18 +264,18 @@ namespace :load do
       players_and_stats = scores.map{|player, stats| [Player.find_by_name(player), stats]}
 
       if home_team.nil?
-        puts "wrong team name for home team: #{home}"
+        puts "ERROR: wrong team name for home team: #{home}"
         next
       end
 
       if visiting_team.nil?
-        puts "wrong team name for visiting team: #{visitor}"
+        puts "ERROR: wrong team name for visiting team: #{visitor}"
         next
       end
 
       if players_and_stats.select{|player, stats| player.nil? }.present?
         players = scores.select{|player, stats| Player.find_by_name(player).nil?}.map{|player, stats| player}
-        puts "wrong players #{players.join(', ')} name in game between #{home} and #{visitor}"
+        puts "ERROR: wrong players #{players.join(', ')} name in game between #{home} and #{visitor}"
         next
       end
 

@@ -50,6 +50,11 @@ class FantasyTeam < Team
     players_ftms = fantasy_team_memberships.group_by(&:pos)
     players_ftms.values.each do |ftms|
       if starting_player_ftms(ftms).size > starting_player_ftms_still_playing_by_week(ftms, week_number).size
+        #
+        # the fact that we are hear means that at least one player is out because
+        # either his team is out or he is out that week
+        # If at least one player is out because his team is out means that the back counts half
+        team_is_out = starting_player_ftms(ftms).select{|ftm| ftm.player.team_out_in_week?(week_number)}.size.positive?
         playing_ftms = starting_player_ftms_still_playing_by_week(ftms, week_number)
         backup_ftms = backup_player_ftms(ftms)
       else
@@ -58,11 +63,16 @@ class FantasyTeam < Team
       end
 
       playing_ftms.each do |ftm|
-        players_and_scores[ftm.player] = {score: ftm.player.score_for_week(week_number), pos: ftm.whole_pos}
+        players_and_scores[ftm.player] = {
+          score: ftm.player.score_for_week(week_number), pos: ftm.whole_pos
+        }
       end
 
       backup_ftms.each do |ftm|
-        players_and_scores[ftm.player] = {score: ftm.player.score_for_week(week_number) / 2.0, pos: ftm.whole_pos}
+        players_and_scores[ftm.player] = {
+          score: ftm.player.score_for_week(week_number) / (team_is_out ? 2.0 : 1.0),
+          pos: ftm.whole_pos
+        }
       end
     end
 

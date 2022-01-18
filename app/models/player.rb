@@ -7,6 +7,8 @@ class Player < ApplicationRecord
 
   has_many :game_scores
 
+  serialize :weeks_out
+
   default_scope ->{ order(:name) }
 
   def score
@@ -51,7 +53,11 @@ class Player < ApplicationRecord
   end
 
   def out_in_week?(week_number)
-    team_out_in_week?(week_number) # || injured_in_weeks.where(week_number: week_number)
+    team_out_in_week?(week_number) || player_out_in_week?(week_number)
+  end
+
+  def player_out_in_week?(week_number)
+    weeks_out && weeks_out.include?(week_number)
   end
 
   def team_out_in_week?(week_number)
