@@ -122,7 +122,7 @@ namespace :load do
 
       "Ron" => {
         "QB"  => ["Tom Brady",           "Tampa Bay"],
-        "QBB"  => ["Ryan Tannehill",     "Green Bay"],
+        "QBB"  => ["Ryan Tannehill",     "Tennessee"],
         "RB1" => ["Ezekeil Elliot",      "Dallas"],
         "RB2" => ["Derrick Henry",       "Tennessee"],
         "RBB" => ["Joe Mixon",           "Cincinatti"],
@@ -254,6 +254,28 @@ namespace :load do
 
         "Sony Michel" =>  [  0,      0,      0,     0,      0,     0,     58,      0,     0,      0,      0,      0,      0,       0,     0,   0    ],
         "Cooper Kupp" =>  [  0,      0,      1,     0,      0,     61,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0    ],
+      },
+
+      ["Cincinatti", "Tennessee", Time.utc(2022, 1, 22, 15, 30), 19, 16] => {
+        #                   PassTD PassInt RecvTD RushTD PassYds RecvYds RushYds Fmbl,  2PTPass 2PTRecv 2PTRush 0-39FGs 40-49FGs 50+FGs ExPt FGMiss
+        "Derrick Henry" => [ 0,      0,      0,     0,      0,     0,      62,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "AJ Brown" =>      [ 0,      0,      1,     0,      0,     142,    0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+
+        "Joe Burrow" =>     [ 0,     1,      0,     0,      348,   0,      0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "Joe Mixon" =>      [ 0,     0,      0,     1,      0,     51,     54,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "Jamar Chase" =>    [ 0,     0,      0,     0,      0,     109,    0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "Evan McPherson" => [ 0,     0,      0,     0,      0,     0,      0,      0,     0,      0,      0,      1,      1,       2,     1,   0      ],
+      },
+
+      ["San Francisco", "Green Bay", Time.utc(2022, 1, 22, 19, 30), 13, 10] => {
+        #                   PassTD PassInt RecvTD RushTD PassYds RecvYds RushYds Fmbl,  2PTPass 2PTRecv 2PTRush 0-39FGs 40-49FGs 50+FGs ExPt FGMiss
+        "Deebo Samuel" =>   [ 0,      0,      0,     1,      0,     44,     39,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "Robbie Gould" =>   [ 0,      0,      0,     0,      0,     0,      0,      0,     0,      0,      0,      1,      1,       0,     1,   0      ],
+
+        "Aaron Rodgers" =>  [ 0,     0,      0,     0,      225,   0,      0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "Aaron Jones" =>    [ 0,     0,      0,     0,      0,     129,    41,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "Devante Adams" =>  [ 0,     0,      0,     1,      0,     90,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "Mason Crosby" =>   [ 0,     0,      0,     0,      0,     0,      0,      0,     0,      0,      0,      1,      0,       0,     1,   0      ],
       },
     }
 
