@@ -8,9 +8,9 @@ class Game < ApplicationRecord
 
   WEEKS = [
     { start_time: Time.utc(2022,1,15),   end_time: Time.utc(2022,1,18),  week_number: 1 },
-    { start_time: Time.utc(2022,1,22),  end_time: Time.utc(2022,1,23), week_number: 2  },
-    { start_time: Time.utc(2022,1,29),  end_time: Time.utc(2022,1,30), week_number: 3  },
-    { start_time: Time.utc(2022,2,13),  end_time: Time.utc(2022,2,13), week_number: 4  },
+    { start_time: Time.utc(2022,1,22),  end_time: Time.utc(2022,1,24), week_number: 2  },
+    { start_time: Time.utc(2022,1,29),  end_time: Time.utc(2022,1,31), week_number: 3  },
+    { start_time: Time.utc(2022,2,12),  end_time: Time.utc(2022,2,14), week_number: 4  },
   ]
 
   scope :on_week, ->(week_number) {

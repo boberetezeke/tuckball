@@ -277,6 +277,32 @@ namespace :load do
         "Devante Adams" =>  [ 0,     0,      0,     1,      0,     90,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
         "Mason Crosby" =>   [ 0,     0,      0,     0,      0,     0,      0,      0,     0,      0,      0,      1,      0,       0,     1,   0      ],
       },
+
+      ["Los Angeles", "Tampa Bay", Time.utc(2022, 1, 23, 14, 00), 30, 27] => {
+        #                   PassTD PassInt RecvTD RushTD PassYds RecvYds RushYds Fmbl,  2PTPass 2PTRecv 2PTRush 0-39FGs 40-49FGs 50+FGs ExPt FGMiss
+        "Sony Michel" =>  [  0,     0,      0,     0,      0,     0,      4,      0,     0,      0,      0,      0,      0,       0,     0,   0    ],
+        "Cooper Kupp" =>  [  0,     0,      1,     0,      0,     183,    0,      0,     0,      0,      0,      0,      0,       0,     0,   0    ],
+
+        "Tom Brady" =>     [ 1,     1,      0,     0,      329,   0,      0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "Leonard Fournette" => [ 0, 0,      0,     2,      0,     0,      51,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "Mike Evans" =>   [ 0,      0,      1,     0,      0,     119,    0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "Rob Gronkowski" => [ 0,    0,      0,     0,      0,     42,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "Ryan Succop" =>  [ 0,      0,      0,     0,      0,     0,      0,      0,     0,      0,      0,      1,      1,       0,     3,   1      ],
+      },
+
+      ["Buffalo", "Kansas City", Time.utc(2022, 1, 23, 17, 00), 36, 42] => {
+        #                   PassTD PassInt RecvTD RushTD PassYds RecvYds RushYds Fmbl,  2PTPass 2PTRecv 2PTRush 0-39FGs 40-49FGs 50+FGs ExPt FGMiss
+        "Josh Allen" =>     [ 4,     0,      0,     0,      329,   0,      68,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "Devin Singletary" => [ 0,   0,      0,     1,      0,     25,     26,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "Stefon Diggs" =>   [ 0,     0,      0,     0,      0,     7,      0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "Dawson Knox" =>    [ 0,     0,      0,     0,      0,     9,      0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "Tyler Bass" =>     [ 0,     0,      0,     0,      0,     0,      0,      0,     0,      0,      0,      0,      0,       0,     4,   0      ],
+
+        "Patrick Mahomes" => [ 3,      0,      0,     0,    378,   0,      69,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "Tyrek Hill" =>     [  0,      0,      1,     0,    0,     150,    0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "Travis Kelce" =>   [  1,      0,      1,     0,    0,     96,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "Harrison Butker" =>  [ 0,     0,      0,     0,    0,     0,      0,      0,     0,      0,      0,      1,      2,       0,     3,   0      ],
+      },
     }
 
     games.each do |opponents, scores|
