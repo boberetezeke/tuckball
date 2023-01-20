@@ -43,7 +43,7 @@ gem 'devise'
 gem 'haml'
 gem 'responders'
 gem 'formtastic', '~> 3.0'
-gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+gem 'twitter-bootstrap-rails', :git => 'https://github.com/seyhunak/twitter-bootstrap-rails.git'
 gem 'formtastic-bootstrap' #, git: 'git://github.com/0xCCD/formtastic-bootstrap.git'
 gem 'pundit'
 

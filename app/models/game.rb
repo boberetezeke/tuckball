@@ -7,10 +7,10 @@ class Game < ApplicationRecord
   default_scope ->{ order('game_time ASC') }
 
   WEEKS = [
-    { start_time: Time.utc(2022,1,15),   end_time: Time.utc(2022,1,18),  week_number: 1 },
-    { start_time: Time.utc(2022,1,22),  end_time: Time.utc(2022,1,24), week_number: 2  },
-    { start_time: Time.utc(2022,1,29),  end_time: Time.utc(2022,1,31), week_number: 3  },
-    { start_time: Time.utc(2022,2,12),  end_time: Time.utc(2022,2,14), week_number: 4  },
+    { start_time: Time.utc(2023,1,15),   end_time: Time.utc(2023,1,18),  week_number: 1 },
+    { start_time: Time.utc(2023,1,22),  end_time: Time.utc(2023,1,24), week_number: 2  },
+    { start_time: Time.utc(2023,1,29),  end_time: Time.utc(2023,1,31), week_number: 3  },
+    { start_time: Time.utc(2023,2,12),  end_time: Time.utc(2023,2,14), week_number: 4  },
   ]
 
   scope :on_week, ->(week_number) {
