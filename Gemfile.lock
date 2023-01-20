@@ -92,8 +92,8 @@ GEM
       actionpack (>= 3.2.13)
     formtastic-bootstrap (3.1.1)
       formtastic (>= 3.0)
-    globalid (0.4.2)
-      activesupport (>= 4.2.0)
+    globalid (1.0.0)
+      activesupport (>= 5.0)
     haml (5.2.1)
       temple (>= 0.8.0)
       tilt
@@ -291,6 +291,7 @@ DEPENDENCIES
   figaro
   formtastic (~> 3.0)
   formtastic-bootstrap
+  globalid (~> 1.0)
   haml
   jbuilder (~> 2.5)
   jquery-rails
