@@ -131,7 +131,7 @@ namespace :load do
         "WRB" => ["Cee Dee Lamb",       "Dallas"],
         "TE" =>  ["TJ Hockenson",       "Minnesota"],
         "TEB" => ["Travis Kelce",       "Kansas City"],
-        "K" =>   ["Jake Elliot",        ""],
+        "K" =>   ["Jake Elliot",        "Philadelphia"],
         "KB" =>  ["Brett Maher",        "Dallas"],
       },
 
@@ -191,7 +191,7 @@ namespace :load do
         "WRB" => ["AJ Brown",           "Philadelphia"],
         "TE" =>  ["Travis Kelce",       "Kansas City"],
         "TEB" => ["Dawson Knox",        "Buffalo"],
-        "K" =>   ["Jake Elliot",        "Eagles"],
+        "K" =>   ["Jake Elliot",        "Philadelphia"],
         "KB" =>  ["Harrison Bukter",    "Kansas City"],
       },
 
