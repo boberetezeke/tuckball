@@ -269,7 +269,7 @@ namespace :load do
       ["Los Angeles", "Jacksonville", Time.utc(2023, 1, 15, 15, 30), 30, 31] => {
         #                     PassTD PassInt RecvTD RushTD PassYds RecvYds RushYds Fmbl,  2PTPass 2PTRecv 2PTRush 0-39FGs 40-49FGs 50+FGs ExPt FGMiss
         "Austin Eckeler" =>   [ 0,     0,      0,     2,      0,     0,      35,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
-        "Cameron Dicker" =>   [ 0,     0,      0,     0,      0,     73,     0,      0,     0,      0,      0,      2,      0,       1,     3,   0      ],
+        "Cameron Dicker" =>   [ 0,     0,      0,     0,      0,     0,      0,      0,     0,      0,      0,      2,      0,       1,     3,   0      ],
 
         "Riley Patterson" =>  [ 0,     0,      0,     0,      0,     73,     0,      0,     0,      0,      0,      1,      0,       0,     2,   0      ],
       },
