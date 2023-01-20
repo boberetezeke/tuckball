@@ -68,6 +68,7 @@ GEM
     commonjs (0.2.7)
     concurrent-ruby (1.1.7)
     crass (1.0.6)
+    dalli (3.2.3)
     database_cleaner (1.8.5)
     devise (4.7.3)
       bcrypt (~> 3.0)
@@ -285,6 +286,7 @@ PLATFORMS
 DEPENDENCIES
   byebug
   coffee-rails (~> 4.2)
+  dalli
   database_cleaner
   devise
   factory_girl_rails
@@ -318,4 +320,4 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 BUNDLED WITH
-   2.3.30
+   2.3.20
