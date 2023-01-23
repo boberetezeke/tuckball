@@ -57,7 +57,7 @@ namespace :load do
         "TE" =>  ["Travis Kelce",         "Kansas City"],
         "TEB" => ["George Kittle",        "San Francisco"],
         "K" =>   ["Tyler Bass",           "Buffalo"],
-        "KB" =>  ["Harrison Bukter",      "Kansas City"],
+        "KB" =>  ["Harrison Butker",      "Kansas City"],
       },
 
       "Gordy" => {
@@ -192,7 +192,7 @@ namespace :load do
         "TE" =>  ["Travis Kelce",       "Kansas City"],
         "TEB" => ["Dawson Knox",        "Buffalo"],
         "K" =>   ["Jake Elliot",        "Philadelphia"],
-        "KB" =>  ["Harrison Bukter",    "Kansas City"],
+        "KB" =>  ["Harrison Butker",    "Kansas City"],
       },
 
     }
@@ -271,7 +271,7 @@ namespace :load do
         "Austin Eckeler" =>   [ 0,     0,      0,     2,      0,     0,      35,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
         "Cameron Dicker" =>   [ 0,     0,      0,     0,      0,     0,      0,      0,     0,      0,      0,      2,      0,       1,     3,   0      ],
 
-        "Riley Patterson" =>  [ 0,     0,      0,     0,      0,     73,     0,      0,     0,      0,      0,      1,      0,       0,     2,   0      ],
+        "Riley Patterson" =>  [ 0,     0,      0,     0,      0,     0,      0,      0,     0,      0,      0,      1,      0,       0,     2,   0      ],
       },
 
       ["Seattle", "San Francisco", Time.utc(2023, 1, 15, 15, 30), 23, 41] => {
@@ -298,6 +298,52 @@ namespace :load do
         "Tony Pollard" =>   [ 0,     0,      0,     2,      0,     12,     77,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
         "Cee Dee Lamb" =>   [ 0,     0,      1,     0,      0,     68,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
         "Brett Maher" =>    [ 0,     0,      0,     0,      0,     0,      0,      0,     0,      0,      0,      1,      0,       0,     4,   0      ],
+      },
+
+      ["Dallas", "San Francisco", Time.utc(2023, 1, 22, 15, 30), 12, 19] => {
+        #                        PassTD PassInt RecvTD RushTD PassYds RecvYds RushYds Fmbl,  2PTPass 2PTRecv 2PTRush 0-39FGs 40-49FGs 50+FGs ExPt FGMiss
+        "Tony Pollard" =>        [ 0,     0,      0,     0,      0,     11,     22,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "Cee Dee Lamb" =>        [ 0,     0,      0,     0,      0,     117,    0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "Brett Maher" =>         [ 0,     0,      0,     0,      0,     0,      0,      0,     0,      0,      0,      1,      1,       0,     0,   0      ],
+
+        "Christian McCaffrey" => [ 0,     0,      0,     1,      0,     22,     35,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "George Kittle" =>       [ 0,     0,      0,     0,      0,     95,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "Robbie Gould" =>        [ 0,     0,      0,     0,      0,     0,      0,      0,     0,      0,      0,      2,      1,       1,     1,   0      ],
+      },
+
+      ["New York", "Philadelphia", Time.utc(2023, 1, 22, 15, 30), 31, 24] => {
+        #                       PassTD PassInt RecvTD RushTD PassYds RecvYds RushYds Fmbl,  2PTPass 2PTRecv 2PTRush 0-39FGs 40-49FGs 50+FGs ExPt FGMiss
+        "Saquon Barkley" =>   [ 0,     0,      0,     0,      0,     21,     61,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "Graham Gano" =>      [ 0,     0,      0,     0,      0,     0,      0,      0,     0,      0,      0,      0,      0,       0,     1,   0      ],
+
+        "Miles Sanders" =>    [ 0,     0,      0,     0,      0,     0,      90,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "AJ Brown" =>         [ 0,     0,      0,     0,      0,     47,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "Dallas Goedert" =>   [ 0,     0,      1,     0,      0,     58,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "Jalen Hurts" =>      [ 2,     0,      0,     0,      154,   0,      0,      0,     0,      0,      0,      1,      0,       0,     0,   1      ],
+        "Jake Elliot" =>      [ 0,     0,      0,     0,      0,     0,      0,      0,     0,      0,      0,      1,      0,       0,     5,   0      ],
+      },
+
+      ["Cincinatti", "Buffalo", Time.utc(2023, 1, 22, 11, 30), 27, 10] => {
+        #                     PassTD PassInt RecvTD RushTD PassYds RecvYds RushYds Fmbl,  2PTPass 2PTRecv 2PTRush 0-39FGs 40-49FGs 50+FGs ExPt FGMiss
+        "Joe Burrow" =>     [ 1,     0,      0,     0,      242,   0,      31,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "Joe Mixon" =>      [ 0,     0,      0,     1,      0,     18,     105,    0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "Ja'marr Chase" =>  [ 0,     0,      1,     0,      0,     61,     3,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "Evan McPherson" => [ 0,     0,      0,     0,      0,     0,      0,      0,     0,      0,      0,      2,      0,       0,     3,   0      ],
+
+        "Josh Allen" =>      [ 0,     1,      0,     0,      265,   0,      26,    0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "James Cook" =>      [ 0,     0,      0,     1,      0,     0,      13,    0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "Stefon Diggs" =>    [ 0,     0,      0,     0,      0,     35,     0,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "Dawson Knox" =>     [ 0,     0,      1,     0,      0,     65,     0,     0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "Tyler Bass" =>      [ 0,     0,      0,     0,      0,     0,      0,     0,     0,      0,      0,      1,      0,       0,     1,   0      ],
+      },
+
+      ["Jacksonville", "Kansas City", Time.utc(2023, 1, 22, 15, 30), 30, 31] => {
+        #                     PassTD PassInt RecvTD RushTD PassYds RecvYds RushYds Fmbl,  2PTPass 2PTRecv 2PTRush 0-39FGs 40-49FGs 50+FGs ExPt FGMiss
+        "Riley Patterson" =>  [ 0,     0,      0,     0,      0,     0,      0,      0,     0,      0,      0,       0,      2,       0,     2,   0      ],
+
+        "Patrick Mahomes" =>  [ 2,     0,      0,     0,      195,   0,      0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "Travis Kelce" =>     [ 0,     0,      2,     0,      0,     98,     0,      0,     0,      0,      0,      0,      0,       0,     0,   0      ],
+        "Harrison Butker" =>  [ 0,     0,      0,     0,      0,     0,      0,      0,     0,      0,      0,      1,      0,       2,     3,   0      ],
       },
     }
 
